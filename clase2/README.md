@@ -20,11 +20,12 @@ Haga click en `python`
 
 ![](img/lab2.png)
 
-Explore el Overview que será una referencia rápida con instrucciones y documentación sobre las imágenes
+#### Explore el Overview
+El Overview es una pequeña documentación para ver qué hace la imágen, como se usa y recomendaciones.
 
 ![](img/lab3.png)
 
-Explore los tags
+#### Explore los tags
 
 ![](img/lab4.png)
 
@@ -33,72 +34,55 @@ De esa manera puede buscar que tags hay disponibles para su imágen que quiera d
 
 ## 2. Descargar una imágen
 
-Elija una imágen desde los tags, verá que tiene un botón que dice "Copy" que le permitirá copiar el comando para poder descargar la imágen correspondiente al tag deseado.
+Haga click en el botón "Copy" de la imágen o bien del tag seleccionado. Verá que quedará en el portapapeles el comando.
 
-Vamos a una terminal y escriba lo siguiente:
+![](img/lab5.png)
+
+Luego vamos a una terminal y pegamos el comando copiado. En este caso de ejemplo será la imágen `python:3.9.19-alpine3.20`.
 
 ```bash
-docker pull docker pull python:3.9.19-alpine3.20
+docker pull python:3.9.19-alpine3.20
 ```
 
 Eso descargará la imágen de `Python 3.9.19` usando como base la imágen `alpine3.20`.
 
-
-
-
-
-
-
-
-
-
-
-
 ```bash
-docker build . -t best-page
-```
-Eso generará la imágen Docker, llamada `best-page`.
+$ docker pull python:3.9.19-alpine3.20
+3.9.19-alpine3.20: Pulling from library/python
+c6a83fedfae6: Pulling fs layer
+c430fb000139: Pulling fs layer
+8869f56a453a: Pulling fs layer
+f1f123496ad3: Pulling fs layer
+fb800bab7c10: Pulling fs layer
+f1f123496ad3: Waiting
+fb800bab7c10: Waiting
+c6a83fedfae6: Verifying Checksum
+c6a83fedfae6: Download complete
+c430fb000139: Download complete
+c6a83fedfae6: Pull complete
+f1f123496ad3: Verifying Checksum
+f1f123496ad3: Download complete
+8869f56a453a: Download complete
+fb800bab7c10: Verifying Checksum
+fb800bab7c10: Download complete
+c430fb000139: Pull complete
+8869f56a453a: Pull complete
+f1f123496ad3: Pull complete
+fb800bab7c10: Pull complete
+Digest: sha256:3beee521e2eec6a3a9ba0c2fdac1bf30969e7f275e379f5b0dd8b45b25f50955
+Status: Downloaded newer image for python:3.9.19-alpine3.20
+docker.io/library/python:3.9.19-alpine3.20
 
-## 3. Verificar que la imágen fue creada
-
-Verificar que la imágen fue creada con el comando `docker images`
-
-```bash
-docker images
-
-REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
-best-page                     latest    b77f72c4c183   4 minutes ago    125MB 
-```
-
-:ok_hand: ¡Perfecto! La imágen ha sido creada.
-
-## 4. Correr el contenedor:
-
-```bash
-docker run -d -p 80:80 best-page
 ```
 
-En este caso, se le manda parámetros a `docker run`:
-- `-d`: Indica que el contenedor se ejecutará como *daemon*.
-- `-p`: Indica que se publicarán puertos hacia afuera del contenedor. En este caso, `80:80` mapea el puerto 80 de nuestra PC al puerto 80 del contenedor.
 
-## 5. Verificar que el contenedor esté corriendo
+## 3. Comprobar que la imágen se encuentre descargada
 
-Ejecutar el comando `docker ps`
+Utilizaremos el comando para listar imágenes, `docker images`.
 
 ```bash
-docker ps
+$ docker images
+REPOSITORY    TAG                 IMAGE ID       CREATED        SIZE
+python        3.9.19-alpine3.20   f214f2d92214   3 weeks ago    47.7MB
 
-CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                               NAMES
-ea914d8b91b3   best-page   "nginx -g 'daemon of…"   5 seconds ago   Up 5 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   funny_elgamal
 ```
-
-## 6. Comprobar el funcionamiento
-
-Ingrese a un navegador y escriba en la dirección [localhost](http://localhost)
-
-![](./screenshot.png)
-
----------------
-
-![](../../img/footer.svg)
