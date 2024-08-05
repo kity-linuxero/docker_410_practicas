@@ -1,2 +1,0 @@
-# Laboratorios clase 2
-

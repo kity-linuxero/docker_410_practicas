@@ -1,6 +1,6 @@
 # Laboratorio 2.1 - Imágenes, registry y contenedores
 
-### Objetivo:
+### ObjetivoS:
 - Entender la diferencia entre imágen y contenedor.
 - Introducción a comandos básicos para gestión de imágenes y contenedores
 
