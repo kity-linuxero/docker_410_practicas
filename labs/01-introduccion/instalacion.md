@@ -1,9 +1,8 @@
 # Laboratorio 1.1 - Instalación de Docker
 
 ### Objetivos:
+
 - Correcta instalación de Docker en nuestra PC de prueba.
-
-
 
 ## 1. Instalación Docker Desktop
 
@@ -59,6 +58,8 @@ Puede tardar en iniciar por primera vez el Docker Engine. En background se ejecu
 ### Docker iniciado
 
 ![](https://docker.idepba.com.ar/img/clase1/Docker_install7.png)
+
+:bulb: Observe que tiene disponible dos tutoriales para explorar Docker Desktop: How do I run a container? y Run Docker Hub Images. Puede verlos si desea.
 
 ### Abrimos una ventana de PowerShell:
 
@@ -139,18 +140,12 @@ Lo que indicá que:
 3. El daemon de Docker creó un nuevo contenedor a partir de esa imagen que ejecuta el ejecutable que produce la salida que estábamos leyendo.
 4. El daemon de Docker transmitió esa salida al cliente de Docker, que la envió a la terminal.
 
-Y para probar algo mas ambicioso, podemos ejecutar un container Ubuntu. Que lo haremos a continuación:
+Y para probar algo mas ambicioso, podemos ejecutar un container Ubuntu. Lo haremos en el [Lab 1.2](./primeros-comandos.md)
 
-## 3. Contenedor Ubuntu
 
-Vamos a ejecutar un contenedor Ubuntu. Un contenedor Ubuntu, como lo puede ser un Debian, Alpine, etc se dice que es una _imágen base_; una imágen que solo contiene un entorno para ejecutar nuestras aplicaciones. A menudo, ese entorno es muy simple y necesita de la instalación de dependencias y paquetes adicionales.
+## Conclusión
 
-```bash
-docker run -it ubuntu bash
-```
+En este laboratorio instalamos Docker Desktop que nos permitió correr comandos con la CLI de Docker. Los mismos pasos podrían haberse realizado desde la interface gráfica, pero en este curso nos enfocaremos en la CLI de Docker.
+Además, ejecutamos un contenedor `hello-world` que se utiliza para verificar el correcto funcionamiento del entorno Docker en nuestro entorno.
 
-Luego que la imágen se haya descargado, tendremos un promt de terminal de bash de la siguiente manera:
-
-```
-root@d9080b400c84:/#
-```
+---------
