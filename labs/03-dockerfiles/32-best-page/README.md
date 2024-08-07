@@ -1,9 +1,12 @@
-# Actividad 2 - La mejor página del mundo
+# Actividad 3.2 - La mejor página del mundo
 
->Al finalizar esta actividad, usted habrá conteinerizado una página web estática.
+## Objetivos
+- Conteinerizar una página web estática.
+- Publicar puertos y poder acceder al contenedor desde nuesta PC.
+- Seguir analizando y entendiendo conceptos de `Dockerfiles`.
 
 ### Archivos a usar en esta actividad:
-- `index.html`: El código de la página que vamos a servir.
+- `index.html`: El código de la página que vamos a servir. 
 - `Dockerfile`: Archivo Dockerfile con las instrucciones para armar la imaǵen.
 
 

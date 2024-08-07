@@ -1,6 +1,10 @@
-# Actividad 1 - Una vaca te saluda
+# Laboratorio 3.1 - Una vaca te saluda
 
->Al finalizar esta actividad, usted habrá conteinerizado una aplicación escrita en Python con sus dependencias.
+## Objetivos:
+- Analizar y entender básicamente archivos `Dockerfile`
+- Crear una imágen usando `Dockerfile` que sirva para correr nuestra aplicación con todas sus dependencias y scripts para instalarlas.
+- Ejecutar contenedores de nuestra imágen
+- Conteinerizar una aplicación Python.
 
 ### Archivos a usar en esta actividad:
 

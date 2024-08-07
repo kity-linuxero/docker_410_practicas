@@ -37,8 +37,8 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 
 ### Laboratorio 3
 
-1. [Una vaca saluda](./labs/03-dockerfiles/32-cow/README.md)
-2. [La mejor página](./labs/03-dockerfiles/31-best-page/README.md)
+1. [Una vaca saluda](./labs/03-dockerfiles/31-cow/README.md)
+2. [La mejor página](./labs/03-dockerfiles/32-best-page/README.md)
 ---------
 
 Centro de Formación CFL 410 - Omar Nuñez
