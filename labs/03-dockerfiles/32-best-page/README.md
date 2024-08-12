@@ -82,6 +82,47 @@ Ingrese a un navegador y escriba en la dirección [localhost](http://localhost)
 
 ![](./screenshot.png)
 
+## Mejorar archivo
+
+Para este ejercicio usamos una imágen base `ubuntu` y luego hemos instalado `nginx`. Siempre que sea posible, optaremos por buscar las imágenes base que mas cerca estén de nuestra aplicación. Es decir, en vez de bajar una imágen `ubuntu` y luego instalar `nginx` lo mejor es bajar directamente una imágen `nginx`.
+
+Podemos buscar las imágenes con el comando `search`
+
+```bash
+docker search nginx
+```
+
+O bien desde Docker Hub buscamos la imágen de <a href="https://hub.docker.com/_/nginx" target="_blank">nginx</a> con el tag que mejor se adapte a nuestras necesidades.
+
+
+Vamos a elegir la siguiente imágen: `nginx:stable-alpine3.19` y cambiar el Dockerfile
+
+```dockerfile
+# Imágen base
+FROM nginx:stable-alpine3.19
+
+# Copio el archivo index para que sea visible desde el nginx del contenedor
+# La ruta cambia porque alpine por defecto cambia la ruta.
+COPY index.html /usr/share/nginx/html
+
+# Expongo el puerto 80
+EXPOSE 80
+
+```
+
+### Volvemos a buildear la imágen
+
+```bash
+docker build . -t best-page:alpine
+
+```
+
+### Corremos el contenedor
+
+```bash
+docker run -d -p 80:80 best-page:alpine
+```
+
 ---------------
 
 ![](../../img/footer.svg)
