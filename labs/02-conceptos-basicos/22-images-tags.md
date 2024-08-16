@@ -15,20 +15,38 @@ Las imágenes Docker son inmutables, lo que significa que una vez creadas, no se
 
 ## Gestión de versiones de imágenes
 
-### 1. Correr un contenedor Ubuntu de prueba
+### 1. Correr un contenedor Linux de prueba
 
-1. **Ejecuta el siguiente comando para correr un contenedor basado en la imagen de Ubuntu:**
+1. **Ejecuta el siguiente comando para correr un contenedor basado en la imagen de Ubuntu o AlmaLinux:**
 
     ```bash
     docker run -it --name contenedor-prueba ubuntu
     ```
 
+    o bien
+
+    ```bash
+    docker run -it --name contenedor-prueba-alma almalinux bash
+    ```
+
+
+
 2. **Una vez dentro del contenedor, instala el paquete `curl`:**
+
+
+#### En el caso de Ubuntu será:
 
     ```bash
     apt update            # Actualiza la lista de paquetes
     apt install -y curl   # Instala curl
     ```
+
+#### En el caso de Rocky será:
+
+    ```bash
+    dnf install curl --skip-broken        # Instala Curl
+    ```
+
 
 3. **Comprobamos que `curl` esté correctamente instalado**
 
