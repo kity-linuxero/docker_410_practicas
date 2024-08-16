@@ -7,6 +7,7 @@
 
 ## Índice
 1. [Introducción a Docker](#introducción-a-docker)
+2. [Conceptos básicos - Imágenes, registry y contenedores]()
 
 
 
@@ -20,7 +21,14 @@ En estos laboratorios aprenderemos a instalar Docker y daremos los primeros paso
 2. [Primeros comandos](./labs/01-introduccion/primeros-comandos.md)
 
 
+## Conceptos básicos
 
+En estos laboratorios entenderemos en la práctica la diferencia entre imágen y contenedores. Versionaremos imágenes para para crear nuestras imágenes y exportaremos nuestras imágenes a archivos para luego poder importarlas.
+
+### Laboratorio 2
+
+1. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/21-images-registry-container.md)
+2. [Imágenes y versiones](./labs/02-conceptos-basicos/22-images-tags.md)
 ---------
 
 Centro de Formación CFL 410 - Omar Nuñez
