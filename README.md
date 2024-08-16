@@ -29,6 +29,7 @@ En estos laboratorios entenderemos en la práctica la diferencia entre imágen y
 
 1. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/21-images-registry-container.md)
 2. [Imágenes y versiones](./labs/02-conceptos-basicos/22-images-tags.md)
+2. [Guardando imágenes en DockerHub](./labs/02-conceptos-basicos/23-images-push.md)
 ---------
 
 Centro de Formación CFL 410 - Omar Nuñez
