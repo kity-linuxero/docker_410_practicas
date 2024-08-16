@@ -1,6 +1,6 @@
 # Laboratorio 2.1 - Imágenes, registry y contenedores
 
-### ObjetivoS:
+### Objetivos:
 - Entender la diferencia entre imágen y contenedor.
 - Introducción a comandos básicos para gestión de imágenes y contenedores
 
@@ -113,7 +113,7 @@ CONTAINER ID   IMAGE                      COMMAND     CREATED         STATUS    
 
 ```
 
-#### Qué ha pasado
+#### ¿Qué ha pasado?
 
 Los contenedores corren la imágen correspondientes y una vez que finalizan su ejecución, terminan. En este caso, veremos que el contenedor está en estado `Exited (0)`. Eso quiere decir que terminó sin errores.
 
@@ -136,7 +136,7 @@ Hola Curso
 
 ## 5. Verifiquemos que el contenedor esté corriendo correctamente
 
-Abra otra ventana de la terminal PowerShell o Bash.
+Abra otra ventana de la terminal PowerShell o Bash. Y y vuelva a ejecutar `docker ps`.
 
 ```powershell
 docker ps
@@ -144,8 +144,7 @@ CONTAINER ID   IMAGE                      COMMAND     CREATED         STATUS    
 f31d11fefb76   python:3.9.19-alpine3.20   "python3"   6 seconds ago   Up 5 seconds             upbeat_murdock
 ```
 
-Ahora podemos ver que hay un contenedor corriendo, levantado hace 5 segundos en mi caso.
-
+Ahora podemos ver que hay un contenedor corriendo, levantado hace 5 segundos en mi caso. 
 Observemos mas detenidamente el output de `docker ps`:
 
 - `CONTAINER ID`: Será el ID del contenedor. Se trata de un hash que identifica al contenedor de forma única.
@@ -159,8 +158,6 @@ Observemos mas detenidamente el output de `docker ps`:
 
 Para salir del intérprete de Python, vuelva a la terminal que está ejecutando la sesión interactiva y escriba `exit()`.
 
-## 6. Imágenes y contenedores
-
 Volvamos a listar los contenedores en ejecución:
 
 ```bash
@@ -170,7 +167,10 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 # Ningún contenedor corriendo
 ```
 
-Listemos ahora, todos los contenedores:
+
+## 6. Imágenes y contenedores
+
+Listemos ahora, todos los contenedores con `docker ps -a`.
 
 ```bash
 docker ps -a
@@ -182,6 +182,7 @@ b2aa6f190df5   ubuntu                     "bash"      3 days ago    Exited (0) 3
 ```
 
 Vemos todos los contenedores que fueron levantados o creados en algún momento y ahora están en un status de `Exit`. Esto quiere decir que los contenedores están sin ejecutarse.
+
 Es posible volver a levantarlos con `docker start <ID> o <NAME>`. Pero en estos casos, como es necesaria de una sesión interactiva para mantenerlos en ejecución, será necesario agregar el parámetro `-i` o `--interactive` para que se mantenga corriendo:
 
 ```bash
@@ -209,7 +210,7 @@ f31d11fefb76   python:3.9.19-alpine3.20   "python3"   2 hours ago   Up 42 second
 
 ## 7. Deteniendo contenedores
 
-Desde esta ventana de terminal vamos a detener el contenedor con ID `f31d11fefb76` y NAME `upbeat_murdock`.
+Desde esta ventana de terminal vamos a detener el contenedor que está corriendo python, en mi caso, con ID `f31d11fefb76` y NAME `upbeat_murdock`. Para eso, ejecutaremos: `docker stop <CONTAINER ID | NAME>`.
 
 ```bash
 docker stop upbeat_murdock  # Comando ejecutado
@@ -228,7 +229,7 @@ Observe que ahora cambia el código de Exit (137). Que indica que el contenedor 
 
 ## 8. Eliminando contenedores
 
-Si seguimos haciendo pruebas, de levantar contenedores y bajarlos constantemente tendremos una lista de contenedores en estado de `Exit que tal vez no deseamos tener.
+Si seguimos haciendo pruebas, de levantar contenedores y bajarlos constantemente tendremos una lista de contenedores en estado de `Exit` que tal vez no deseamos tener.
 
 Se utiliza el comando `docker rm <ID>|<NAME>`.
 
@@ -262,7 +263,7 @@ El comando `docker rm` puede ir acompañado por el ID completo o parcial.
 
 #### Iniciar un contenedor y luego se borre automáticamente
 
-Si agregamos el parámetro `--rm`, nuestro contenedor se eliminará automáticamente al cerrarse.
+Si agregamos el parámetro `--rm`, nuestro contenedor se eliminará automáticamente al cerrarse. 
 
 ```bash
 docker run -it --rm --name contenedor_prueba python:3.9.19-alpine3.20 # Le asignamos un nombre al contenedor
@@ -320,6 +321,52 @@ CONTAINER ID   IMAGE          COMMAND     CREATED       STATUS                  
 b2aa6f190df5   ubuntu         "bash"      3 days ago    Exited (0) 3 days ago              goofy_mcclintock
 ```
 
+## 10. Eliminar objetos no utilizados
+
+A medida que vamos investigando Docker, corriendo contenedores, descargando nuevas imágenes para probar, todas esas imágenes y contenedores quedarán en nuestra computadora. Si ya no los vamos a usar mas o queremos limpiar el entorno Docker tenemos comandos que nos ayudan:
+
+#### Prune Images
+
+El comando `docker image prune` nos permite limpiar imágenes sin uso. Por defecto, solo limpia imágenes _dangling_, es decir imágenes que no están tageadas y no son referenciadas por ningún contenedor.
+
+```bash
+docker image prune
+
+WARNING! This will remove all dangling images.
+Are you sure you want to continue? [y/N] y
+```
+
+#### Prune containers
+
+Cuando detenemos un contenedor, no se removerá automáticamente y quedará en algún estado que indica que terminó (a menos que lo ejecutemos con el parámetro `--rm`). Para eliminar todos los contenedores sin uso se puede hacer con el comando `docker conainer prune`.
+
+```bash
+docker container prune
+
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+```
+
+#### Prune everything
+
+Además de _"prunear"_ contenedores e imágenes, lo mismo aplica para __volúmenes__ y __redes__ (se verán en las próximas clases). Con los comandos `docker volume prune` y `docker network prune` respectivamente.
+
+Hay una manera de hacer una limpieza total del sistema con `docker system prune`:
+
+```bash
+docker system prune
+
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - unused build cache
+
+Are you sure you want to continue? [y/N] y
+```
+
+Puede consultar las [referencias](#referencias) para mas ejemplos de `prune`.
+
 
 
 
@@ -333,4 +380,5 @@ b2aa6f190df5   ubuntu         "bash"      3 days ago    Exited (0) 3 days ago   
 - <a href="https://docs.docker.com/reference/cli/docker/container/start/" target="_blank">docker start</a>
 - <a href="https://docs.docker.com/reference/cli/docker/container/stop/" target="_blank">docker stop</a>
 - <a href="https://docs.docker.com/reference/cli/docker/container/rm/" target="_blank">docker rm</a>
+- <a href="https://docs.docker.com/engine/manage-resources/pruning/" target="_blank">docker prune</a>
 
