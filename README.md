@@ -7,7 +7,7 @@
 
 ## Índice
 1. [Introducción a Docker](#introducción-a-docker)
-2. [Conceptos básicos - Imágenes, registry y contenedores]()
+2. [Conceptos básicos - Imágenes, registry y contenedores](#conceptos-básicos)
 
 
 
