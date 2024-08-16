@@ -113,7 +113,7 @@ En estos pasos, aprendimos a correr un contenedor, hacer modificaciones y crear 
 ## Guardado y cargando una imágen
 
 Podemos guardar nuestra imágen personalizada a una registry o un archivo. En este lab, veremos el segundo caso.
-La gestión local (en archivos) de imágenes nos serán utiles si no queremos subir nuestra imágen a un repositorio público o bien, podemos transportarla de un equipo a otro sin necesidad de tener internet para *pullear* las imágenes base.
+La gestión local (en archivos) de imágenes nos serán útiles si no queremos subir nuestra imágen a un repositorio público o bien, podemos transportarla de un equipo a otro sin necesidad de tener internet para *pullear* las imágenes base.
 
 ### 4. Guardar imágen a un archivo
 
