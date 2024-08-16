@@ -138,7 +138,7 @@ La gestión local (en archivos) de imágenes nos serán útiles si no queremos s
 1. **Guarda la imagen `mi-imagen:v1.1` en un archivo:**
 
     ```bash
-    docker save -o mi-imagen_v1.1.tar 
+    docker save -o mi-imagen_v1.1.tar mi-imagen:v1.1
     ```
 
     Otra forma de hacerlo es:
