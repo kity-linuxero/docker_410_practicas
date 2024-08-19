@@ -35,17 +35,17 @@ Las imágenes Docker son inmutables, lo que significa que una vez creadas, no se
 
 
 #### En el caso de Ubuntu será:
+    
+```bash
+apt update            # Actualiza la lista de paquetes
+apt install -y curl   # Instala curl
+```
 
-    ```bash
-    apt update            # Actualiza la lista de paquetes
-    apt install -y curl   # Instala curl
-    ```
+#### En el caso de AlmaLinux será:
 
-#### En el caso de Rocky será:
-
-    ```bash
-    dnf install curl --skip-broken        # Instala Curl
-    ```
+```bash
+dnf install curl --skip-broken        # Instala Curl
+```
 
 
 3. **Comprobamos que `curl` esté correctamente instalado**
@@ -100,19 +100,25 @@ Las imágenes Docker son inmutables, lo que significa que una vez creadas, no se
     apt install -y nano
     ```
 
-3. **Salir del contenedor:**
+    ó
+
+   ```bash
+   dnf install nano
+   ```
+
+4. **Salir del contenedor:**
 
     ```bash
     exit
     ```
 
-4. **Guardamos el contenedor como una nueva imagen con la etiqueta `v1.1`:**
+5. **Guardamos el contenedor como una nueva imagen con la etiqueta `v1.1`:**
 
     ```bash
     docker commit contenedor-prueba-v1.0 mi-imagen:v1.1
     ```
 
-5. **Verifica que la nueva imagen se haya creado:**
+6. **Verifica que la nueva imagen se haya creado:**
 
     ```bash
     docker images
@@ -138,7 +144,7 @@ La gestión local (en archivos) de imágenes nos serán útiles si no queremos s
 1. **Guarda la imagen `mi-imagen:v1.1` en un archivo:**
 
     ```bash
-    docker save -o mi-imagen_v1.1.tar 
+    docker save -o mi-imagen_v1.1.tar mi-imagen:v1.1
     ```
 
     Otra forma de hacerlo es:
