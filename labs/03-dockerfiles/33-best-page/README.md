@@ -1,4 +1,4 @@
-# Actividad 3.2 - La mejor página del mundo
+# Laboratorio 3.2 - La mejor página del mundo
 
 ## Objetivos
 - Conteinerizar una página web estática.

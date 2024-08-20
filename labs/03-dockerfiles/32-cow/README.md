@@ -1,4 +1,4 @@
-# Laboratorio 3.1 - Una vaca te saluda
+# Laboratorio 3.2 - Una vaca te saluda
 
 ## Objetivos:
 - Analizar y entender básicamente archivos `Dockerfile`
@@ -8,9 +8,10 @@
 
 ### Archivos a usar en esta actividad:
 
-- `cowsay-hello.py`: El código fuente escrito en Python que vamos a correr en un contenedor.
-- `Dockerfile`: Archivo Dockerfile con las instrucciones para armar la imaǵen.
-- `requirements.txt`: Archivo generalmente usado en programas Python para listar las dependencias.
+- [`cowsay-hello.py`](./cowsay-hello.py): El código fuente escrito en Python que vamos a correr en un contenedor.
+- [`Dockerfile`](./Dockerfile): Archivo Dockerfile con las instrucciones para armar la imaǵen.
+- [`requirements.txt`](./requirements.txt): Archivo generalmente usado en programas Python para listar las dependencias.
+- <a href="./requirements.txt" download>requirements.txt</a>: Archivo generalmente usado en programas Python para listar las dependencias.
 
 ## 1. Analizar el archivo `Dockerfile`:
 ```Dockerfile
