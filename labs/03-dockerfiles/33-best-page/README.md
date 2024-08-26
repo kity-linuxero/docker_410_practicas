@@ -10,7 +10,7 @@
 - `Dockerfile`: Archivo Dockerfile con las instrucciones para armar la imaǵen.
 - `Dockerfile.alpine`: Archivo Dockerfile con las instrucciones para armar la imaǵen basada en Alpine Linux.
 
-<a href="/33-best-page.zip" download>Descargar archivos</a>.
+<a href="./33-best-page.zip" download>Descargar archivos</a>.
 
 
 ## 1. Analizar el archivo `Dockerfile`:
