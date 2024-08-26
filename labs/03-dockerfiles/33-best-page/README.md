@@ -8,37 +8,44 @@
 ### Archivos a usar en esta actividad:
 - `index.html`: El código de la página que vamos a servir. 
 - `Dockerfile`: Archivo Dockerfile con las instrucciones para armar la imaǵen.
+- `Dockerfile.alpine`: Archivo Dockerfile con las instrucciones para armar la imaǵen basada en Alpine Linux.
+
+<a href="/requirements.txt" download>Descargar archivos</a>.
 
 
 ## 1. Analizar el archivo `Dockerfile`:
 
 ```dockerfile
-# Imágen base
-FROM ubuntu:latest
+# Usar la imagen base de AlmaLinux
+FROM almalinux:latest
 
-# Ejecuto actualización de repositorios e instalo el servidor web nginx
-RUN apt-get update && apt-get install -y nginx
+# Instalar Nginx
+RUN yum update -y && \
+    yum install -y epel-release && \
+    yum install -y nginx && \
+    yum clean all
 
-# Copio el archivo index para que sea visible desde el nginx del contenedor
-COPY index.html /var/www/html/
+# Copiar el archivo index.html al directorio por defecto de Nginx
+COPY index.html /usr/share/nginx/html/index.html
 
-# Comando a ejecutar
+# Exponer el puerto 80
+EXPOSE 80
+
+# Comando para iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]
 
-# Expongo el puerto 80
-EXPOSE 80
 ```
 
-Según podemos ver, arrancamos de una imágen base Ubuntu. Sin nada instalado. Así que, se procede a actualizar la base de repositorios con `apt-get update` y luego instalamos nginx con `apt-get install nginx`.
+Según podemos ver, arrancamos de una imágen base AlmaLinux. Sin nada instalado. Así que será necesario actualizar la base de repositorios y luego instalar `nginx` para contar con un servidor web.
 
-En la capa 3, se copia el archivo `index.html` a la ruta `/var/www/html` que es la ruta por defecto donde nginx almacena los archivos.
+En la capa 3, se copia el archivo `index.html` a la ruta `/usr/share/nginx/html/` que es la ruta por defecto donde nginx almacena los archivos.
 
 ## 2. Crear la imaǵen
 
 Ejecutar:
 
 ```bash
-docker build . -t best-page
+docker build -t best-page .
 ```
 Eso generará la imágen Docker, llamada `best-page`.
 
@@ -50,7 +57,7 @@ Verificar que la imágen fue creada con el comando `docker images`
 docker images
 
 REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
-best-page                     latest    b77f72c4c183   4 minutes ago    125MB 
+best-page                     latest    b77f72c4c183   4 minutes ago    267MB 
 ```
 
 :ok_hand: ¡Perfecto! La imágen ha sido creada.
@@ -82,9 +89,25 @@ Ingrese a un navegador y escriba en la dirección [localhost](http://localhost)
 
 ![](./screenshot.png)
 
-## Mejorar archivo
+## 7. Detener el contenedor
 
-Para este ejercicio usamos una imágen base `ubuntu` y luego hemos instalado `nginx`. Siempre que sea posible, optaremos por buscar las imágenes base que mas cerca estén de nuestra aplicación. Es decir, en vez de bajar una imágen `ubuntu` y luego instalar `nginx` lo mejor es bajar directamente una imágen `nginx`.
+Ejecutar el siguiente comando
+
+```bash
+docker ps
+```
+
+Buscar el `ID` del contenedor que está corriendo nuestra imágen recién creada y detenerlo de la siguiente manera.
+
+```bash
+docker rm -f CONTAINER_ID
+```
+
+Eso eliminará el contenedor y con el parámetro `-f` forzará a eliminar un contenedor que está corriendo.
+
+## 8. Mejorar proceso de construcción
+
+Para este ejercicio usamos una imágen base `almalinux` y luego hemos instalado `nginx`. Siempre que sea posible, optaremos por buscar las imágenes base que mas cerca estén de nuestra aplicación. Es decir, en vez de bajar una imágen `almalinux` y luego instalar `nginx` lo mejor es bajar directamente una imágen `nginx`.
 
 Podemos buscar las imágenes con el comando `search`
 
@@ -94,8 +117,11 @@ docker search nginx
 
 O bien desde Docker Hub buscamos la imágen de <a href="https://hub.docker.com/_/nginx" target="_blank">nginx</a> con el tag que mejor se adapte a nuestras necesidades.
 
+Para este ejercicio usaremos el archivo `Dockerfile.alpine` brindado en el zip.
 
-Vamos a elegir la siguiente imágen: `nginx:stable-alpine3.19` y cambiar el Dockerfile
+
+
+docker build -f Dockerfile.alpine -t pagina .Vamos a elegir la siguiente imágen: `nginx:stable-alpine3.19` y cambiar el Dockerfile
 
 ```dockerfile
 # Imágen base
@@ -110,18 +136,28 @@ EXPOSE 80
 
 ```
 
-### Volvemos a buildear la imágen
+
+
+### 8.1 Volvemos a buildear la imágen
 
 ```bash
-docker build . -t best-page:alpine
-
+docker build -f Dockerfile.alpine -t best-page:alpine .
 ```
 
-### Corremos el contenedor
+>Observar el tamaño nuevo de la imágen y compararla con la imágen generada anteriormente.
+
+### 8.2 Corremos el contenedor
 
 ```bash
 docker run -d -p 80:80 best-page:alpine
 ```
+
+- Ingrese a un navegador y escriba en la dirección [localhost](http://localhost)
+
+### 8.3 Eliminar contenedor
+
+Repita los pasos seguidos en el [punto 7](#7-detener-el-contenedor)
+
 
 ---------------
 

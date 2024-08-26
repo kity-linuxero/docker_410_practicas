@@ -8,10 +8,12 @@
 
 ### Archivos a usar en esta actividad:
 
-- [`cowsay-hello.py`](./cowsay-hello.py): El código fuente escrito en Python que vamos a correr en un contenedor.
-- [`Dockerfile`](./Dockerfile): Archivo Dockerfile con las instrucciones para armar la imaǵen.
-- [`requirements.txt`](./requirements.txt): Archivo generalmente usado en programas Python para listar las dependencias.
-- <a href="./requirements.txt" download>requirements.txt</a>: Archivo generalmente usado en programas Python para listar las dependencias.
+- <a href="/cowsay-hello.py" download>`cowsay-hello.py`</a>: El código fuente escrito en Python que vamos a correr en un contenedor.
+- <a href="/Dockerfile" download>`Dockerfile`</a>: Archivo Dockerfile con las instrucciones para armar la imaǵen.
+
+- <a href="/requirements.txt" download>`requirements.txt`</a>: Archivo generalmente usado en programas Python para listar las dependencias.
+
+Puede descargar todos estos archivos desde un solo link <a href="./32-cow.zip" download>acá</a>.
 
 ## 1. Analizar el archivo `Dockerfile`:
 ```Dockerfile
@@ -78,6 +80,8 @@ docker run vaquita
                              ||     ||
 
 ```
+
+En este Lab hemos _dockerizado_ una app desarrollada en Python. Si bien la app es muy simple, el mecanismo para dockerizar aplicaciones en Python es el mismo.
 
 ---------------
 

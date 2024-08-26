@@ -52,7 +52,7 @@
 - Deberías ver el mensaje `¡Hola, Docker!` en la terminal.
 
 
-## 4. Enviando parámetros.
+## 4. Seteando variables de entorno
 
 - Vamos a modificar un poco el `Dockerfile` para que tenga un mensaje predeterminado y podamos personalizandolo en el `docker run`.
 
@@ -78,7 +78,7 @@
 - Cambiaremos el comando de ejecución para mostrar otro mensaje:
 
   ```bash
-  docker run -r MENSAJE="Mensaje personalizado" mi-app:v2.0
+  docker run -e MENSAJE="Mensaje personalizado" mi-app:v2.0
   ```
 
 - Deberías ver tu mensaje personalizado. 👍

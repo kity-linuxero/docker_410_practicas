@@ -1,14 +1,17 @@
-# Imágen base
-FROM ubuntu:latest
+# Usar la imagen base de Rocky Linux
+FROM almalinux:latest
 
-# Ejecuto actualización de repositorios e instalo el servidor web nginx
-RUN apt-get update && apt-get install -y nginx
+# Instalar Nginx
+RUN yum update -y && \
+    yum install -y epel-release && \
+    yum install -y nginx && \
+    yum clean all
 
-# Copio el archivo index para que sea visible desde el nginx del contenedor
-COPY index.html /var/www/html/
+# Copiar el archivo index.html al directorio por defecto de Nginx
+COPY index.html /usr/share/nginx/html/index.html
 
-# Comando a ejecutar
-CMD ["nginx", "-g", "daemon off;"]
-
-# Expongo el puerto 80
+# Exponer el puerto 80
 EXPOSE 80
+
+# Comando para iniciar Nginx
+CMD ["nginx", "-g", "daemon off;"]
