@@ -5,6 +5,8 @@
 ![Version](https://img.shields.io/badge/Version-1.0-orange)
 
 
+
+
 ## Índice
 1. [Introducción a Docker](#introducción-a-docker)
 2. [Conceptos básicos - Imágenes, registry y contenedores](#conceptos-básicos)
@@ -37,6 +39,7 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 
 ### Laboratorio 3
 
+1. [Hola Docker](./labs/03-dockerfiles/31-holamundo/README.md)
 1. [Una vaca saluda](./labs/03-dockerfiles/31-cow/README.md)
 2. [La mejor página](./labs/03-dockerfiles/32-best-page/README.md)
 ---------
