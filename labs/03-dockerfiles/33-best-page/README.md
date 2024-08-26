@@ -1,4 +1,4 @@
-# Laboratorio 3.2 - La mejor página del mundo
+# Laboratorio 3.3 - La mejor página del mundo
 
 ## Objetivos
 - Conteinerizar una página web estática.
@@ -10,7 +10,7 @@
 - `Dockerfile`: Archivo Dockerfile con las instrucciones para armar la imaǵen.
 - `Dockerfile.alpine`: Archivo Dockerfile con las instrucciones para armar la imaǵen basada en Alpine Linux.
 
-<a href="/requirements.txt" download>Descargar archivos</a>.
+<a href="/33-best-page.zip" download>Descargar archivos</a>.
 
 
 ## 1. Analizar el archivo `Dockerfile`:
