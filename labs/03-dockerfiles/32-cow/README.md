@@ -8,12 +8,12 @@
 
 ### Archivos a usar en esta actividad:
 
-- <a href="/cowsay-hello.py" download>`cowsay-hello.py`</a>: El código fuente escrito en Python que vamos a correr en un contenedor.
-- <a href="/Dockerfile" download>`Dockerfile`</a>: Archivo Dockerfile con las instrucciones para armar la imaǵen.
+- `cowsay-hello.py`: El código fuente escrito en Python que vamos a correr en un contenedor.
+- `Dockerfile`: Archivo Dockerfile con las instrucciones para armar la imaǵen.
 
-- <a href="/requirements.txt" download>`requirements.txt`</a>: Archivo generalmente usado en programas Python para listar las dependencias.
+- `requirements.txt`: Archivo generalmente usado en programas Python para listar las dependencias.
 
-Puede descargar todos estos archivos desde un solo link <a href="./32-cow.zip" download>acá</a>.
+Puede descargar todos estos archivos desde un solo link <a href="https://raw.githubusercontent.com/kity-linuxero/docker_410_practicas/main/labs/03-dockerfiles/32-cow/32-cow.zip" download>acá</a>.
 
 ## 1. Analizar el archivo `Dockerfile`:
 ```Dockerfile
