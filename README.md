@@ -11,6 +11,7 @@
 1. [Introducción a Docker](#introducción-a-docker)
 2. [Conceptos básicos - Imágenes, registry y contenedores](#conceptos-básicos)
 3. [Dockerfile y personalizar imágenes](#dockerfile-y-conteinerizando-nuestras-primeras-apps)
+4. [Redes y persistencia de datos en Docker](#redes-y-persistencia-de-datos-en-docker)
 
 
 ## Introducción a Docker
@@ -40,8 +41,20 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 ### Laboratorio 3
 
 1. [Hola Docker](./labs/03-dockerfiles/31-holamundo/README.md)
-1. [Una vaca saluda](./labs/03-dockerfiles/31-cow/README.md)
-2. [La mejor página](./labs/03-dockerfiles/32-best-page/README.md)
+2. [Una vaca saluda](./labs/03-dockerfiles/31-cow/README.md)
+3. [La mejor página](./labs/03-dockerfiles/32-best-page/README.md)
+
+## Redes y persistencia de datos en Docker
+
+En estos laboratorios vamos crear nuestras primeras redes y volúmenes para persistir datos. Comprobaremos la conectividad entre contenedores y migración de datos.
+
+### Laboratorio 4
+
+1. [Introducción a redes en Docker](./labs/04-redes_volumes/redes/41-introduccion.md)
+2. [Conexión de Múltiples Contenedores en una Red Bridge](./labs/04-redes_volumes/redes/42-containers_net.md)
+3. [Trabajando datos persistentes en Docker](./labs/04-redes_volumes/volumes/43-volumenes_docker.md)
+3. [Backup y migración de volúmenes](./labs/04-redes_volumes/volumes/44-volumenes_bkp.md)
+
 ---------
 
 Centro de Formación CFL 410 - Omar Nuñez
