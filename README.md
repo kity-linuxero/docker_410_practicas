@@ -1,7 +1,7 @@
 # Guía de Laboratorios curso Fundamentos de Docker
 
 ![Docker](https://img.shields.io/badge/Docker-Container-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
 ![Version](https://img.shields.io/badge/Version-1.0-orange)
 
 
