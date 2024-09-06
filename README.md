@@ -12,6 +12,7 @@
 2. [Conceptos básicos - Imágenes, registry y contenedores](#conceptos-básicos)
 3. [Dockerfile y personalizar imágenes](#dockerfile-y-conteinerizando-nuestras-primeras-apps)
 4. [Redes y persistencia de datos en Docker](#redes-y-persistencia-de-datos-en-docker)
+5. [Docker compose](#docker-compose)
 
 
 ## Introducción a Docker
@@ -54,6 +55,15 @@ En estos laboratorios vamos crear nuestras primeras redes y volúmenes para pers
 2. [Conexión de Múltiples Contenedores en una Red Bridge](./labs/04-redes_volumes/redes/42-containers_net.md)
 3. [Trabajando datos persistentes en Docker](./labs/04-redes_volumes/volumes/43-volumenes_docker.md)
 3. [Backup y migración de volúmenes](./labs/04-redes_volumes/volumes/44-volumenes_bkp.md)
+
+## Docker compose
+
+En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedores con Docker Compose.
+
+### Laboratorio 5
+
+1. [Deployar un contenedor web sencillo con Docker Compose](./labs/05-compose/51-intro.compose.md)
+2. [Aplicaciones multicontenedor](./labs/05-compose/52-multicontainer.md)
 
 ---------
 
