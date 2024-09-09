@@ -13,6 +13,7 @@
 3. [Dockerfile y personalizar imágenes](#dockerfile-y-conteinerizando-nuestras-primeras-apps)
 4. [Redes y persistencia de datos en Docker](#redes-y-persistencia-de-datos-en-docker)
 5. [Docker compose](#docker-compose)
+6. [Docker compose Parte II y depuración de contenedores](#docker-compose-parte-ii-y-depuración)
 
 
 ## Introducción a Docker
@@ -65,6 +66,15 @@ En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedo
 1. [Deployar un contenedor web sencillo con Docker Compose](./labs/05-compose/51-intro.compose.md)
 2. [Aplicaciones multicontenedor](./labs/05-compose/52-multicontainer.md)
 
+## Docker compose parte II y depuración
+
+En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose. También veremos nociones básicas de depuración de contenedores.
+
+### Laboratorio 6
+
+1. [Docker Compose Parte II](./labs/06-compose-debug/61-compose2.md)
+2. [Verificación de recursos](./labs/06-compose-debug/62-compose-resources.md)
+2. [Depuración de contenedores](./labs/06-compose-debug/63-debug.md)
 ---------
 
 Centro de Formación CFL 410 - Omar Nuñez
