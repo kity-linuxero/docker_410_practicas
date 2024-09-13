@@ -23,7 +23,7 @@ Los links siguientes recolectan composes y los ordenan por categorías.
 - ¿Es capaz de poder deployar el compose elejido?. Examine el archivo compose y verifique si puede deployarlo en su computadora.
 
 > [!IMPORTANT]  
-> Algunos composes pueden tener errores o tener datos de plantillas que deben ser cambiados. Observe bien antes de deployar, intente leer la documentación.
+> Algunos composes pueden tener errores o tener datos de plantillas que deben ser cambiados o bien requerir de una infraestructura que no es posible tener en su máquina de prueba. Observe bien antes de deployar, intente leer la documentación.
 
 
 
