@@ -5,9 +5,7 @@
 ![Version](https://img.shields.io/badge/Version-1.0-orange)
 
 
-
-
-## Índice
+## 🐳 Índice
 1. [Introducción a Docker](#introducción-a-docker)
 2. [Conceptos básicos - Imágenes, registry y contenedores](#conceptos-básicos)
 3. [Dockerfile y personalizar imágenes](#dockerfile-y-conteinerizando-nuestras-primeras-apps)
