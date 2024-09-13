@@ -12,6 +12,7 @@
 4. [Redes y persistencia de datos en Docker](#redes-y-persistencia-de-datos-en-docker)
 5. [Docker compose](#docker-compose)
 6. [Docker compose Parte II y depuración de contenedores](#docker-compose-parte-ii-y-depuración)
+7. [Awesome Compose](#awesome-compose)
 
 
 ## Introducción a Docker
@@ -73,6 +74,17 @@ En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose.
 1. [Docker Compose Parte II](./labs/06-compose-debug/61-compose2.md)
 2. [Verificación de recursos](./labs/06-compose-debug/62-compose-resources.md)
 2. [Depuración de contenedores](./labs/06-compose-debug/63-debug.md)
+
+
+## Awesome Compose
+
+En este laboratorio exploraremos composes compartidos por la comunidad listos para deployar y usar.
+
+### Laboratorio 7
+
+1. [Awesome Compose](./labs/07-awesome-compose/71-awesome-compose.md)
+
+
 ---------
 
 Centro de Formación CFL 410 - Omar Nuñez
