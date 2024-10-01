@@ -115,3 +115,5 @@ fd2e2c172856   curso-web-1   3.11%     4.371MiB / 32MiB      13.66%    331kB / 7
 - Ejecutar el comando `docker compose down` para detener el contenedor `web` y eliminar las redes creadas.
 
 --------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

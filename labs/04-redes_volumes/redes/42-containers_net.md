@@ -87,3 +87,5 @@ Crear y conectar múltiples contenedores en una red bridge para que puedan comun
     ```
 
 --------
+
+<img src="../../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

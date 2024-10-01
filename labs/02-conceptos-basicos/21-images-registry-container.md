@@ -382,3 +382,6 @@ Puede consultar las [referencias](#referencias) para mas ejemplos de `prune`.
 - <a href="https://docs.docker.com/reference/cli/docker/container/rm/" target="_blank">docker rm</a>
 - <a href="https://docs.docker.com/engine/manage-resources/pruning/" target="_blank">docker prune</a>
 
+-------------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

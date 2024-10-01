@@ -251,3 +251,5 @@ Debería ver la misma página que antes.
 
 
 --------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

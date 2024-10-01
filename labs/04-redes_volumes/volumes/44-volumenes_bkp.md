@@ -121,3 +121,5 @@ docker rm app_container restored_container
 docker volume rm data_vol restored_vol
 ```
 --------
+
+<img src="../../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

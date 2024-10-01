@@ -206,3 +206,6 @@ Removing login credentials for https://index.docker.io/v1/
 - <a href="https://docs.docker.com/reference/cli/docker/logout/" target="_blank">docker logout</a>
 
 
+------------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

@@ -149,3 +149,5 @@ En este laboratorio instalamos Docker Desktop que nos permitió correr comandos 
 Además, ejecutamos un contenedor `hello-world` que se utiliza para verificar el correcto funcionamiento del entorno Docker en nuestro entorno.
 
 ---------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

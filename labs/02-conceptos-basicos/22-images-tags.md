@@ -221,3 +221,7 @@ En este laboratorio, has aprendido sobre la inmutabilidad de las imágenes Docke
 - <a href="https://docs.docker.com/reference/cli/docker/container/commit/" target="_blank">docker commit</a>
 - <a href="https://docs.docker.com/reference/cli/docker/image/save/" target="_blank">docker image save</a>
 - <a href="https://docs.docker.com/reference/cli/docker/image/load/" target="_blank">docker image load</a>
+
+--------------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

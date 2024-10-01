@@ -82,3 +82,5 @@ Familiarizarse con la creación de redes bridge, la redirección de puertos, y l
     ```
 
 --------
+
+<img src="../../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

@@ -164,3 +164,5 @@
 - El bind mount se elimina automáticamente al detener y eliminar el contenedor.
 
 --------
+
+<img src="../../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

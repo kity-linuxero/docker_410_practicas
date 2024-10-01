@@ -151,3 +151,5 @@ miapp2_web  nginx:alpine  "/docker-ent…"  web      49 seconds ago   Up 48 seco
 
 
 --------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

@@ -2,7 +2,7 @@
 
 ![Docker](https://img.shields.io/badge/Docker-Container-blue)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
-![Version](https://img.shields.io/badge/Version-1.0-orange)
+![Version](https://img.shields.io/badge/Version-1.1-orange)
 
 
 ## 🐳 Índice
@@ -87,6 +87,4 @@ En este laboratorio exploraremos composes compartidos por la comunidad listos pa
 
 ---------
 
-Centro de Formación CFL 410 - Omar Nuñez
-
-IDEP | Instituto de Estudios sobre Estado y Participación
+<img src="img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">

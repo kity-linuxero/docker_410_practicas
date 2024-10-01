@@ -47,3 +47,5 @@ Utilizar diferentes herramientas de depuración para entender el estado y el fun
 - Refresquemos la página con `F5`.
 
 --------
+
+<img src="../../img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">
