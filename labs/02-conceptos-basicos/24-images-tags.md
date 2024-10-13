@@ -1,4 +1,4 @@
-# Laboratorio 2.2: Gestión de imágenes y versiones en Docker
+# Laboratorio 2.3: Gestión de imágenes y versiones en Docker
 
 ## Objetivos:
 - Entender por qué las imágenes de Docker son inmutables.
@@ -93,14 +93,14 @@ dnf install curl --skip-broken        # Instala Curl
     docker run -it --name contenedor-prueba-v1.0 mi-imagen:v1.0
     ```
 
-2. **Dentro del contenedor, instalamos otro paquete, por ejemplo, `nano`:**
+2. **Dentro del contenedor, instalamos otro paquete, por ejemplo, `nano`. En Ubuntu ejecutamos:**
 
     ```bash
     apt update
     apt install -y nano
     ```
 
-    ó
+    ó en AlmaLinux:
 
    ```bash
    dnf install nano
@@ -156,6 +156,9 @@ La gestión local (en archivos) de imágenes nos serán útiles si no queremos s
     Ambas nos darán el mismo resultado.
 
 2. **Verificamos que el archivo se ha creado:**
+
+  - Explore la carpeta local y verifique que se haya creado el archivo
+  - Si está en una terminal Bash, escriba el siguiente comando: 
 
     ```bash
     ls -sh mi-imagen_v1.1.tar 
@@ -221,3 +224,9 @@ En este laboratorio, has aprendido sobre la inmutabilidad de las imágenes Docke
 - <a href="https://docs.docker.com/reference/cli/docker/container/commit/" target="_blank">docker commit</a>
 - <a href="https://docs.docker.com/reference/cli/docker/image/save/" target="_blank">docker image save</a>
 - <a href="https://docs.docker.com/reference/cli/docker/image/load/" target="_blank">docker image load</a>
+
+--------------
+
+<p align="center">
+  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+</p>

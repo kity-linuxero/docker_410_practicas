@@ -1,11 +1,9 @@
-# Laboratorio 2.3: Guardando imágenes en DockerHub
+# Laboratorio 2.4: Guardando imágenes en DockerHub
 
 ## Objetivos:
 - Guardar nuestras imágenes en Dockerhub
 - Compartir nuestras imágenes
 - Conceptos de login y logout
-
->**Importante:** ⚠️ El siguiente Lab ha sido probado enteramente usando Docker CLI. Puede ser que en Docker Desktop algún paso pueda diferir ligeramente en la sección de login.
 
 ##  Crear cuenta en DockerHub
 
@@ -15,17 +13,17 @@
 
     Elegimos "Sign Up" para crear una cuenta.
 
-    ![](./img/lab6.png)
+    ![](https://docker.idepba.com.ar/img/labs/lab2/lab6.png)
 
 2. **Creamos una cuenta**
 
     Elegimos un e-mail, un nombre de usuario y una contraseña.
 
-    ![](./img/lab7.png)
+    ![](https://docker.idepba.com.ar/img/labs/lab2/lab7.png)
 
 3. **Nos llegará un mail para confirmar la cuenta**
 
-    ![](./img/lab8.png)
+    ![](https://docker.idepba.com.ar/img/labs/lab2/lab8.png)
 
     Confirmemos con el link y accedamos a DockerHub.
 
@@ -33,7 +31,7 @@
 
     En la opción "My Profile" podemos listar nuestros repositorios. Como he creado la cuenta recién, no habrá nada que mostrar.
 
-    ![](./img/lab9.png)
+    ![](https://docker.idepba.com.ar/img/labs/lab2/lab9.png)
 
 
 
@@ -162,24 +160,27 @@ Tal como hicimos en el laboratorio anterior, vamos a hacer una nueva versión de
 
     Abrimos nuevamente DockerHub en "My Profile". Si todo salió bien, debería aparecer algo similar a la imágen:
 
-    ![](./img/lab10.png)
+    ![](https://docker.idepba.com.ar/img/labs/lab2/lab10.png)
 
     Si hacemos clic en el repositorio y luego en _Tags_ deberíamos ver lo siguiente:
 
-    ![](./img/lab11.png)
+    ![](https://docker.idepba.com.ar/img/labs/lab2/lab11.png)
 
 
 
-## 4. Descargue la imágen de otro alumno/a
+## 4. Descargue la imágen desde la registry
 
-Para concluir, probemos el mensaje que le ha puesto nuestro compañero o compañera de curso. Pídale a alguien que le pase la ruta de su imágen para poder ver su mensaje.
+Para concluir, intentemos eliminar completamente las imágenes recientemente creadas. Para listar las imágenes, use el comando `docker images` y para eliminarlas el comando `docker rmi <IMAGE_ID>`.
 
-Ejecute el comando `docker run --rm -it <USUARIO>/<IMAGE>:<TAG>`. En mi caso será:
+
+- Una vez las imágenes eliminadas ejecute el comando `docker run --rm -it <USUARIO>/<IMAGE>:<TAG>`. En mi caso será:
 
 ```bash
 $ docker run -it --rm cgiambruni/debian:bookworm-slim-bienvenida-v1 bash
 Bienvenido a mi Debian personalizado
 ```
+
+Docker debería haber descargado su imágen de DockerHub y mostrar el mensaje personalizado.
 
 Salga del contenedor con el comando `exit`.
     
@@ -193,11 +194,6 @@ Removing login credentials for https://index.docker.io/v1/
 
 ```
 
-
-
-
-
-
 ## Referencias
 
 - <a href="https://docs.docker.com/reference/cli/docker/container/commit/" target="_blank">docker commit</a>
@@ -206,3 +202,8 @@ Removing login credentials for https://index.docker.io/v1/
 - <a href="https://docs.docker.com/reference/cli/docker/logout/" target="_blank">docker logout</a>
 
 
+------------
+
+<p align="center">
+  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+</p>

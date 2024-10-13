@@ -87,4 +87,6 @@
 
 ---------------
 
-![](../../img/footer.svg)
+<p align="center">
+  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+</p>

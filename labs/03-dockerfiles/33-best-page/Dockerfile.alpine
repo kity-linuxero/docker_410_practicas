@@ -1,9 +1,0 @@
-# Imágen base
-FROM nginx:stable-alpine3.19
-
-# Copio el archivo index para que sea visible desde el nginx del contenedor
-# La ruta cambia porque alpine por defecto cambia la ruta.
-COPY index.html /usr/share/nginx/html
-
-# Expongo el puerto 80
-EXPOSE 80

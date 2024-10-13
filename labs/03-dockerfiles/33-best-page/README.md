@@ -60,7 +60,7 @@ REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
 best-page                     latest    b77f72c4c183   4 minutes ago    267MB 
 ```
 
-:ok_hand: ¡Perfecto! La imágen ha sido creada.
+
 
 ## 4. Correr el contenedor:
 
@@ -79,8 +79,8 @@ Ejecutar el comando `docker ps`
 ```bash
 docker ps
 
-CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                               NAMES
-ea914d8b91b3   best-page   "nginx -g 'daemon of…"   5 seconds ago   Up 5 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   funny_elgamal
+CONTAINER ID  IMAGE      COMMAND                 CREATED        STATUS        PORTS               NAMES
+ea914d8b91b3  best-page  "nginx -g 'daemon of…"  5 seconds ago  Up 5 seconds  0.0.0.0:80->80/tcp  funny_el
 ```
 
 ## 6. Comprobar el funcionamiento
@@ -121,7 +121,7 @@ Para este ejercicio usaremos el archivo `Dockerfile.alpine` brindado en el zip.
 
 
 
-docker build -f Dockerfile.alpine -t pagina .Vamos a elegir la siguiente imágen: `nginx:stable-alpine3.19` y cambiar el Dockerfile
+Vamos a elegir la siguiente imágen: `nginx:stable-alpine3.19` y cambiar el Dockerfile
 
 ```dockerfile
 # Imágen base
@@ -158,7 +158,11 @@ docker run -d -p 80:80 best-page:alpine
 
 Repita los pasos seguidos en el [punto 7](#7-detener-el-contenedor)
 
+## Conclusión
+En este lab hemos containerizado una página web estática. En este caso se ha tratado solo de un simple `index.html`, pero el procedimiento para una página estática mas grande o contenido estático en general es similar.
 
 ---------------
 
-![](../../img/footer.svg)
+<p align="center">
+  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+</p>

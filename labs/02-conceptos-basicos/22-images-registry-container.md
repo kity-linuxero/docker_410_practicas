@@ -1,4 +1,4 @@
-# Laboratorio 2.1 - Imágenes, registry y contenedores
+# Laboratorio 2.2 - Imágenes, registry y contenedores
 
 ### Objetivos:
 - Entender la diferencia entre imágen y contenedor.
@@ -12,20 +12,23 @@ En este ejercicio práctico exploraremos la registry de Docker Hub para buscar i
 #### Acceda desde su navegador web al sitio <a href="https://hub.docker.com/" target="_blank">Docker Hub</a>
 En la barra de búsqueda escriba `python`
 
-![](img/lab1.png)
+![](https://docker.idepba.com.ar/img/labs/lab2/lab1.png)
+
+
 
 #### Haga click en `python`
 
-![](img/lab2.png)
+![](https://docker.idepba.com.ar/img/labs/lab2/lab2.png)
+
 
 #### Explore el Overview
 El Overview es una referencia rápida para ver qué hace la imágen, como se usa y recomendaciones.
 
-![](img/lab3.png)
+![](https://docker.idepba.com.ar/img/labs/lab2/lab3.png)
 
 #### Explore los tags
 
-![](img/lab4.png)
+![](https://docker.idepba.com.ar/img/labs/lab2/lab4.png)
 
 De esa manera podremos buscar entre los tags, la imágen que mejor se adapte a nuestras necesidades.
 
@@ -34,7 +37,7 @@ De esa manera podremos buscar entre los tags, la imágen que mejor se adapte a n
 
 Haga click en el botón "Copy" de la imágen o del tag seleccionado. Verá que quedará en el portapapeles el comando.
 
-![](img/lab5.png)
+![](https://docker.idepba.com.ar/img/labs/lab2/lab5.png)
 
 Luego vamos a una terminal y pegamos el comando copiado. En este caso de ejemplo será la imágen `python:3.9.19-alpine3.20`.
 
@@ -119,24 +122,25 @@ Los contenedores corren la imágen correspondientes y una vez que finalizan su e
 
 El contenedor ejecutó el ejecutable de su imágen `python3` (ver COMMAND), pero ha terminado al no tener algún archivo python para procesar o una sesión interactiva para el intérprete . Vamos a probar ejecutando una sesión interactiva a la shell de Python.
 
+Ejecutemos
+
 ```bash
 docker run -it python:3.9.19-alpine3.20
+```
 
-Python 3.9.19 (main, Jul 22 2024, 23:09:15)
-[GCC 13.2.1 20240309] on linux
-Type "help", "copyright", "credits" or "license" for more information.
+Luego en el Shell de Python hagamos un print de pantalla con `print()`, escribiendo `print("Hola Curso")`:
+
+```bash
 >>> print("Hola Curso")
 Hola Curso
 >>>
 ```
 
-💡 _Con el parámetro `-it` enviado a `docker run` ejecutaremos una sesión interactiva._
-
 **¡Excelente!**. Hemos podido ejecutar un shell de Python sin tener que instalar Python en nuestra PC y usando Docker.
 
 ## 5. Verifiquemos que el contenedor esté corriendo correctamente
 
-Abra otra ventana de la terminal PowerShell o Bash. Y y vuelva a ejecutar `docker ps`.
+Abrimos otra ventana de la terminal PowerShell o Bash. Y y vuelva a ejecutar `docker ps`.
 
 ```powershell
 docker ps
@@ -145,16 +149,6 @@ f31d11fefb76   python:3.9.19-alpine3.20   "python3"   6 seconds ago   Up 5 secon
 ```
 
 Ahora podemos ver que hay un contenedor corriendo, levantado hace 5 segundos en mi caso. 
-Observemos mas detenidamente el output de `docker ps`:
-
-- `CONTAINER ID`: Será el ID del contenedor. Se trata de un hash que identifica al contenedor de forma única.
-- `IMAGE`: La imágen que está corriendo el contenedor.
-- `COMMAND`: El comando que ejecutó la imágen. En este caso, `python3`.
-- `CREATED`: El tiempo que hace que el contenedor fue creado.
-- `STATUS`: Estado del contenedor
-- `PORTS`: Los puertos que el contenedor escucha y los puertos del host que son redireccionados al contenedor. Lo veremos mas adelante cuando trabajemos contenedores que interactúen mediante red.
-- `NAMES`: Son los nombres de los contenedores. Es otra forma de identificarlo además del ID. En este caso, como no especificamos el nombre del contenedor, Docker asigna un nombre aleatorio.
-
 
 Para salir del intérprete de Python, vuelva a la terminal que está ejecutando la sesión interactiva y escriba `exit()`.
 
@@ -185,6 +179,8 @@ Vemos todos los contenedores que fueron levantados o creados en algún momento y
 
 Es posible volver a levantarlos con `docker start <ID> o <NAME>`. Pero en estos casos, como es necesaria de una sesión interactiva para mantenerlos en ejecución, será necesario agregar el parámetro `-i` o `--interactive` para que se mantenga corriendo:
 
+En este caso, intentaremos levantar un contenedor en estado de `Exited (0)` y con ID `f31d11fefb76`. Podemos abreviar el hash. Observe el siguiente comando:
+
 ```bash
 docker start -i f31
 
@@ -195,10 +191,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ```
 
-💡 _Con el comando `docker start -i f31` alcanzó solo con indicando **parte del hash ID** para que Docker identificara el contenedor a iniciar. Esto es una ayuda que tenemos para simplificar los comandos; es posible con solo parte del hash ejecutar las instrucciones, tanto para arrancar (`start`) el contenedor, detenerlo (`stop`), borrarlo (`rm`), etc. También la misma lógica aplica para imágenes, redes, etc._
+> [!TIP]  
+> Con el comando `docker start -i f31` alcanzó solo con indicando **parte del hash ID** para que Docker identificara el contenedor a iniciar. Esto es una ayuda que tenemos para simplificar los comandos; es posible con solo parte del hash ejecutar las instrucciones, tanto para arrancar (`start`) el contenedor, detenerlo (`stop`), borrarlo (`rm`), etc. También la misma lógica aplica para imágenes, redes, etc.
 
+- Intente levantar un contenedor que tenga escribiendo solo parte del hash.
 
-Corroboramos desde la otra terminal:
+- Abrimos otra terminal y corroboramos que el contenedor se encuentre corriendo:
 
 ```bash
 docker ps
@@ -260,26 +258,8 @@ b2aa6f190df5   ubuntu                     "bash"      3 days ago    Exited (0) 3
 
 El comando `docker rm` puede ir acompañado por el ID completo o parcial.
 
-
-#### Iniciar un contenedor y luego se borre automáticamente
-
-Si agregamos el parámetro `--rm`, nuestro contenedor se eliminará automáticamente al cerrarse. 
-
-```bash
-docker run -it --rm --name contenedor_prueba python:3.9.19-alpine3.20 # Le asignamos un nombre al contenedor
-
-Python 3.9.19 (main, Jul 22 2024, 23:09:15)
-[GCC 13.2.1 20240309] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> exit()
-
-docker ps -a
-
-CONTAINER ID   IMAGE                      COMMAND     CREATED       STATUS                     NAMES
-880b61430dcc   python:3.9.19-alpine3.20   "python3"   4 hours ago   Exited (0) 4 hours ago     condescending_shannon
-1cda120fa6c1   python:3.9.19-alpine3.20   "python3"   4 hours ago   Exited (0) 4 hours ago     unruffled_moser
-b2aa6f190df5   ubuntu                     "bash"      3 days ago    Exited (0) 3 days ago      goofy_mcclintock
-```
+> [!TIP]
+> Podemos realizar la detención de contenedores y eliminación en un solo comando. `docker rm -f <CONTAINER ID> | <CONTAINER_NAME>` el `-f` o `--force` forzará a la eliminación de un contenedor aunque se encuentre corriendo.
 
 
 ## 9. Eliminar imágenes
@@ -382,3 +362,8 @@ Puede consultar las [referencias](#referencias) para mas ejemplos de `prune`.
 - <a href="https://docs.docker.com/reference/cli/docker/container/rm/" target="_blank">docker rm</a>
 - <a href="https://docs.docker.com/engine/manage-resources/pruning/" target="_blank">docker prune</a>
 
+-------------
+
+<p align="center">
+  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+</p>

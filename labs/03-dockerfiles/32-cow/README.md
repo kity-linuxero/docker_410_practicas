@@ -58,7 +58,7 @@ REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
 vaquita                       latest    4bfe8b137eec   10 minutes ago   54.4MB 
 ```
 
-:ok_hand: ¡Perfecto! La imágen ha sido creada.
+Si el comando `docker images` devuelve datos como lo citado arriba, la imágen ha sido creada correctamente.
 
 ## 4. Correr el contenedor:
 
@@ -68,7 +68,7 @@ docker run vaquita
 ### Resultado
 
 ```bash
-  ______________________                                                                                                      
+  ______________________
 | ¡Hola curso de Docker! |
   ======================
                       \
@@ -81,8 +81,12 @@ docker run vaquita
 
 ```
 
-En este Lab hemos _dockerizado_ una app desarrollada en Python. Si bien la app es muy simple, el mecanismo para dockerizar aplicaciones en Python es el mismo.
+
+## Conclusión
+En este Lab hemos _dockerizado_ una app desarrollada en Python. Si bien la app es muy simple, el mecanismo para dockerizar aplicaciones en Python es similar.
 
 ---------------
 
-![](../../img/footer.svg)
+<p align="center">
+  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+</p>
