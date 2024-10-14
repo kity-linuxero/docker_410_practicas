@@ -6,10 +6,7 @@
 [![Supported by](https://img.shields.io/badge/Supported%20by-CFL410-green.svg)](https://centro410laplata.edu.ar/)
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
-<<<<<<< HEAD
 ![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410)
-=======
->>>>>>> 25c6e4793a314e18407c714ac4eab759a7bd4875
 ![Version](https://img.shields.io/badge/Version-1.1-orange)
 
 
@@ -27,7 +24,7 @@
 En estos laboratorios aprenderemos a instalar Docker y daremos los primeros pasos con una terminal sobre un contenedor Linux.
 
 
-### Laboratorio 1
+### Prácticas Lab 1
 
 1. [Instalación de Docker](./labs/01-introduccion/instalacion.md)
 2. [Primeros comandos](./labs/01-introduccion/primeros-comandos.md)
@@ -37,17 +34,19 @@ En estos laboratorios aprenderemos a instalar Docker y daremos los primeros paso
 
 En estos laboratorios entenderemos en la práctica la diferencia entre imágen y contenedores. Versionaremos imágenes para para crear nuestras imágenes y exportaremos nuestras imágenes a archivos para luego poder importarlas.
 
-### Laboratorio 2
+### Prácticas Lab 2
 
-1. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/21-images-registry-container.md)
-2. [Imágenes y versiones](./labs/02-conceptos-basicos/22-images-tags.md)
+1. [Primeros comandos en Docker](./labs/02-conceptos-basicos/21-cli-primeros-comandos.md)
+2. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/22-images-registry-container.md)
+3. [Imágenes y versiones](./labs/02-conceptos-basicos/23-images-tags.md)
+4. [Guardando imágenes en DockerHub](./labs/02-conceptos-basicos/24-images-push.md)
 
 
 ## 3. Dockerfile y Containerizando nuestras primeras apps
 
 En estos laboratorios vamos a crear nuestras imagenes de forma automática usando `Dockerfiles` para conteinerizar aplicaciones. Vamos a hostear una página estática html y una aplicación Python.
 
-### Laboratorio 3
+### Prácticas Lab 3
 
 1. [Hola Docker](./labs/03-dockerfiles/31-holamundo/README.md)
 2. [Una vaca saluda](./labs/03-dockerfiles/31-cow/README.md)
@@ -85,13 +84,10 @@ En este laboratorio exploraremos composes compartidos por la comunidad listos pa
 
 
 ---------
-<<<<<<< HEAD
+
 <p align="center">
   <a href="https://centro410laplata.edu.ar/">
     <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
   </a>
 </p>
-=======
 
-<img src="img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">
->>>>>>> 25c6e4793a314e18407c714ac4eab759a7bd4875
