@@ -6,7 +6,10 @@
 [![Supported by](https://img.shields.io/badge/Supported%20by-CFL410-green.svg)](https://centro410laplata.edu.ar/)
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
+<<<<<<< HEAD
 ![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410)
+=======
+>>>>>>> 25c6e4793a314e18407c714ac4eab759a7bd4875
 ![Version](https://img.shields.io/badge/Version-1.1-orange)
 
 
@@ -82,8 +85,13 @@ En este laboratorio exploraremos composes compartidos por la comunidad listos pa
 
 
 ---------
+<<<<<<< HEAD
 <p align="center">
   <a href="https://centro410laplata.edu.ar/">
     <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
   </a>
 </p>
+=======
+
+<img src="img/footer.svg" alt="Descripción de la imagen" style="width:100%; filter: grayscale(100%); opacity: 40%">
+>>>>>>> 25c6e4793a314e18407c714ac4eab759a7bd4875

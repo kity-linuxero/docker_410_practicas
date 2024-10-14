@@ -166,3 +166,4 @@ En este lab hemos containerizado una página web estática. En este caso se ha t
 <p align="center">
   <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
 </p>
+
