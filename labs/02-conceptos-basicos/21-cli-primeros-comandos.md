@@ -190,5 +190,7 @@ Podrá verificar que el contenedor llamado `lab21-rm` no aparece en el listado. 
 ---------
 
 <p align="center">
-  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+  <a href="https://centro410laplata.edu.ar/">
+    <img src="../../img/logos.footer.gray.webp">
+  </a>
 </p>

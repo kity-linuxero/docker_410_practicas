@@ -88,5 +88,7 @@ En este Lab hemos _dockerizado_ una app desarrollada en Python. Si bien la app e
 ---------------
 
 <p align="center">
-  <img src="https://docker.idepba.com.ar/img/logos/logos.footer.gray.webp">
+  <a href="https://centro410laplata.edu.ar/">
+    <img src="../../../img/logos.footer.gray.webp">
+  </a>
 </p>
