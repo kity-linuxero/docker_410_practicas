@@ -56,11 +56,11 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 
 En estos laboratorios vamos crear nuestras primeras redes y volúmenes para persistir datos. Comprobaremos la conectividad entre contenedores y migración de datos.
 
-#### Redes
+#### Prácticas Lab 4: Redes
 1. [Introducción a redes en Docker](./labs/04-redes_volumes/redes/41-introduccion.md)
 2. [Conexión de Múltiples Contenedores en una Red Bridge](./labs/04-redes_volumes/redes/42-containers_net.md)
 
-#### Volúmenes
+#### Prácticas Lab4: Volúmenes
 3. [Trabajando datos persistentes en Docker](./labs/04-redes_volumes/volumes/43-volumenes_docker.md)
 4. [Backup y migración de volúmenes](./labs/04-redes_volumes/volumes/44-volumenes_bkp.md)
 
@@ -69,8 +69,10 @@ En estos laboratorios vamos crear nuestras primeras redes y volúmenes para pers
 
 En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedores con Docker Compose.
 
-> [!CAUTION]
-> **PROXIMAMENTE**
+### Prácticas Lab 5
+
+1. [Deployar un contenedor web sencillo con Docker Compose](./labs/05-compose/51-intro.compose.md)
+2. [Aplicaciones multicontenedor](./labs/05-compose/52-multicontainer.md)
 
 ## 6. Docker compose parte II y depuración
 
