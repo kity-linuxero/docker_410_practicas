@@ -78,8 +78,11 @@ En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedo
 
 En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose. También veremos nociones básicas de depuración de contenedores.
 
-> [!CAUTION]
-> **PROXIMAMENTE**
+### Prácticas Lab 6
+
+1. [Docker Compose | Parte II](./labs/06-compose-debug/61-compose2.md)
+2. [Verificación de recursos](./labs/06-compose-debug/62-compose-resources.md)
+3. [Depuración de contenedores](./labs/06-compose-debug/63-debug.md)
 
 
 ## 7. Awesome Compose
