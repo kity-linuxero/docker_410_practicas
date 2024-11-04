@@ -89,8 +89,9 @@ En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose.
 
 En este laboratorio exploraremos composes compartidos por la comunidad listos para deployar y usar.
 
-> [!CAUTION]
-> **PROXIMAMENTE**
+### Prácticas Lab 7
+
+1. [Awesome Compose](./labs/07-awesome-compose/71-awesome-compose.md)
 
 
 ---------
