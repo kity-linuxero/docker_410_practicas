@@ -7,7 +7,7 @@
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
 ![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410)
-![Version](https://img.shields.io/badge/Version-1.1-orange)
+![Version](https://img.shields.io/badge/Version-1.2-orange)
 
 
 ## 🐳 Índice de temas
@@ -36,10 +36,8 @@ En estos laboratorios entenderemos en la práctica la diferencia entre imágen y
 
 ### Prácticas Lab 2
 
-1. [Primeros comandos en Docker](./labs/02-conceptos-basicos/21-cli-primeros-comandos.md)
-2. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/22-images-registry-container.md)
-3. [Imágenes y versiones](./labs/02-conceptos-basicos/23-images-tags.md)
-4. [Guardando imágenes en DockerHub](./labs/02-conceptos-basicos/24-images-push.md)
+> [!CAUTION]
+> **PROXIMAMENTE**
 
 
 ## 3. Dockerfile y Containerizando nuestras primeras apps
@@ -48,21 +46,24 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 
 ### Prácticas Lab 3
 
-1. [Hola Docker](./labs/03-dockerfiles/31-holamundo/README.md)
-2. [Una vaca saluda](./labs/03-dockerfiles/31-cow/README.md)
-3. [La mejor página](./labs/03-dockerfiles/32-best-page/README.md)
+> [!CAUTION]
+> **PROXIMAMENTE**
 
 ## 4. Redes y persistencia de datos en Docker
 
 En estos laboratorios vamos crear nuestras primeras redes y volúmenes para persistir datos. Comprobaremos la conectividad entre contenedores y migración de datos.
 
 #### Prácticas Lab 4: Redes
-1. [Introducción a redes en Docker](./labs/04-redes_volumes/redes/41-introduccion.md)
-2. [Conexión de Múltiples Contenedores en una Red Bridge](./labs/04-redes_volumes/redes/42-containers_net.md)
+
+
+> [!CAUTION]
+> **PROXIMAMENTE**
 
 #### Prácticas Lab4: Volúmenes
-3. [Trabajando datos persistentes en Docker](./labs/04-redes_volumes/volumes/43-volumenes_docker.md)
-4. [Backup y migración de volúmenes](./labs/04-redes_volumes/volumes/44-volumenes_bkp.md)
+
+
+> [!CAUTION]
+> **PROXIMAMENTE**
 
 
 ## 5. Docker compose
@@ -71,8 +72,9 @@ En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedo
 
 ### Prácticas Lab 5
 
-1. [Deployar un contenedor web sencillo con Docker Compose](./labs/05-compose/51-intro.compose.md)
-2. [Aplicaciones multicontenedor](./labs/05-compose/52-multicontainer.md)
+
+> [!CAUTION]
+> **PROXIMAMENTE**
 
 ## 6. Docker compose parte II y depuración
 
@@ -80,9 +82,9 @@ En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose.
 
 ### Prácticas Lab 6
 
-1. [Docker Compose | Parte II](./labs/06-compose-debug/61-compose2.md)
-2. [Verificación de recursos](./labs/06-compose-debug/62-compose-resources.md)
-3. [Depuración de contenedores](./labs/06-compose-debug/63-debug.md)
+
+> [!CAUTION]
+> **PROXIMAMENTE**
 
 
 ## 7. Awesome Compose
@@ -91,7 +93,9 @@ En este laboratorio exploraremos composes compartidos por la comunidad listos pa
 
 ### Prácticas Lab 7
 
-1. [Awesome Compose](./labs/07-awesome-compose/71-awesome-compose.md)
+
+> [!CAUTION]
+> **PROXIMAMENTE**
 
 
 ---------
