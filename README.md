@@ -70,11 +70,12 @@ En estos laboratorios vamos crear nuestras primeras redes y volúmenes para pers
 
 En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedores con Docker Compose.
 
+
+
 ### Prácticas Lab 5
 
-
-> [!CAUTION]
-> **PROXIMAMENTE**
+1. [Deployar un contenedor web sencillo con Docker Compose](./labs/05-compose/51-intro.compose.md)
+2. [Aplicaciones multicontenedor](./labs/05-compose/52-multicontainer.md)
 
 ## 6. Docker compose parte II y depuración
 
