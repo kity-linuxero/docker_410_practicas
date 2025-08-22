@@ -7,7 +7,7 @@
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
 ![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410)
-![Version](https://img.shields.io/badge/Version-1.2-orange)
+![Version](https://img.shields.io/badge/Version-1.3-orange)
 
 
 ## 🐳 Índice de temas
@@ -57,14 +57,14 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 
 En estos laboratorios vamos crear nuestras primeras redes y volúmenes para persistir datos. Comprobaremos la conectividad entre contenedores y migración de datos.
 
-#### Prácticas Lab 4: Redes
+### Prácticas Lab 4: Redes
 1. [Introducción a redes en Docker]()
 2. [Conexión de Múltiples Contenedores en una Red Bridge]()
 
 
 ## 5. Persistencia de datos en Docker
 
-#### Prácticas Lab5: Volúmenes
+### Prácticas Lab 5: Volúmenes
 1. [Trabajando datos persistentes en Docker]()
 2. [Backup y migración de volúmenes]()
 
