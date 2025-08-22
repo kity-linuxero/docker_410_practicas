@@ -36,10 +36,10 @@ En estos laboratorios entenderemos en la práctica la diferencia entre imágen y
 
 ### Prácticas Lab 2
 
-1. [Primeros comandos en Docker](./labs/02-conceptos-basicos/21-cli-primeros-comandos.md)
-2. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/22-images-registry-container.md)
-3. [Imágenes y versiones](./labs/02-conceptos-basicos/23-images-tags.md)
-4. [Guardando imágenes en DockerHub](./labs/02-conceptos-basicos/24-images-push.md)
+1. [Primeros comandos en Docker]()
+2. [Imagenes, registry y contenedores]()
+3. [Imágenes y versiones]()
+4. [Guardando imágenes en DockerHub]()
 
 
 ## 3. Dockerfile y Containerizando nuestras primeras apps
@@ -48,9 +48,9 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 
 ### Prácticas Lab 3
 
-1. [Hola Docker](./labs/03-dockerfiles/31-holamundo/README.md)
-2. [Una vaca saluda](./labs/03-dockerfiles/32-cow/README.md)
-3. [La mejor página](./labs/03-dockerfiles/33-best-page/README.md)
+1. [Hola Docker]()
+2. [Una vaca saluda]()
+3. [La mejor página]()
 
 
 ## 4. Redes y persistencia de datos en Docker
@@ -58,43 +58,46 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 En estos laboratorios vamos crear nuestras primeras redes y volúmenes para persistir datos. Comprobaremos la conectividad entre contenedores y migración de datos.
 
 #### Prácticas Lab 4: Redes
-1. [Introducción a redes en Docker](./labs/04-redes_volumes/redes/41-introduccion.md)
-2. [Conexión de Múltiples Contenedores en una Red Bridge](./labs/04-redes_volumes/redes/42-containers_net.md)
-
-#### Prácticas Lab4: Volúmenes
-3. [Trabajando datos persistentes en Docker](./labs/04-redes_volumes/volumes/43-volumenes_docker.md)
-4. [Backup y migración de volúmenes](./labs/04-redes_volumes/volumes/44-volumenes_bkp.md)
+1. [Introducción a redes en Docker]()
+2. [Conexión de Múltiples Contenedores en una Red Bridge]()
 
 
-## 5. Docker compose
+## 5. Persistencia de datos en Docker
+
+#### Prácticas Lab5: Volúmenes
+1. [Trabajando datos persistentes en Docker]()
+2. [Backup y migración de volúmenes]()
+
+
+## 6. Docker compose
 
 En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedores con Docker Compose.
 
 
 
-### Prácticas Lab 5
+### Prácticas Lab 6
 
-1. [Deployar un contenedor web sencillo con Docker Compose](./labs/05-compose/51-intro.compose.md)
-2. [Aplicaciones multicontenedor](./labs/05-compose/52-multicontainer.md)
+1. [Deployar un contenedor web sencillo con Docker Compose]()
+2. [Aplicaciones multicontenedor]()
 
-## 6. Docker compose parte II y depuración
+## 7. Docker compose parte II y depuración
 
 En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose. También veremos nociones básicas de depuración de contenedores.
 
-### Prácticas Lab 6
+### Prácticas Lab 7
 
-1. [Docker Compose | Parte II](./labs/06-compose-debug/61-compose2.md)
-2. [Verificación de recursos](./labs/06-compose-debug/62-compose-resources.md)
-3. [Depuración de contenedores](./labs/06-compose-debug/63-debug.md)
+1. [Docker Compose | Parte II]()
+2. [Verificación de recursos]()
+3. [Depuración de contenedores]()
 
 
-## 7. Awesome Compose
+## 8. Awesome Compose
 
 En este laboratorio exploraremos composes compartidos por la comunidad listos para deployar y usar.
 
-### Prácticas Lab 7
+### Prácticas Lab 8
 
-1. [Awesome Compose](./labs/07-awesome-compose/71-awesome-compose.md)
+1. [Awesome Compose]()
 
 
 ---------
