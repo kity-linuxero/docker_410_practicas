@@ -26,7 +26,7 @@ Asegurese de [cumplir con los requisitos del sistema](https://docs.docker.com/de
 [Ver mas](https://docs.docker.com/desktop/install/windows-install/#system-requirements).
 
 
-#### Descargue Docker Desktop <a href="https://hub.docker.com/" target="_blank">Docker Hub</a>
+#### Descargue Docker Desktop <a href="https://docs.docker.com/desktop/setup/install/windows-install/" target="_blank">Docker Desktop</a>
 
 
 ### Una vez descargado el ejecutable lo ejecutamos.
