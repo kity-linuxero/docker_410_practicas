@@ -42,7 +42,7 @@ Como puede verse, se trata de un programa escrito en Python. Las dependencias es
 Ejecutar:
 
 ```bash
-docker build t vaquita:latest .
+docker build -t vaquita:latest .
 ```
 La imágen `vaquita` ha sido creada:
 - Se ha descargado la imágen `python:3.9.19-alpine3.20` de la registry.
