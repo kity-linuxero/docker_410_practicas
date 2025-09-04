@@ -102,7 +102,7 @@ Así que necesitamos construir una nueva imagen con los cambios. Para eso ejecut
   
 
 > [!NOTE]  
-> ¿Por qué no se actualizó el mensaje?, Si no se modificó el archivo `Dockerfile`? Eso es porque si bien no ha habido cambios en el Archivo `Dockerfile`, la caché en el momento que copió el archivo `mensaje.txt`se guarda un _checksum_ de los archivos. Al cambiar el archivo, se cambia el _checksum_ y por lo tanto se vuelve a ejecutar la capa de la copia del archivo
+> ¿Por qué se actualizó el mensaje?, Si no se modificó el archivo `Dockerfile`? Eso es porque si bien no ha habido cambios en el Archivo `Dockerfile`, la caché en el momento que copió el archivo `mensaje.txt`se guarda un _checksum_ de los archivos. Al cambiar el archivo, se cambia el _checksum_ y por lo tanto se vuelve a ejecutar la capa de la copia del archivo
 
 
 ## 4. Seteando variables de entorno
