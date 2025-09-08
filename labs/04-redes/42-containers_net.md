@@ -89,5 +89,5 @@ Crear y conectar múltiples contenedores en una red bridge para que puedan comun
 --------
 
 <p align="center">
-  <img src="../../../img/logos.footer.gray.webp">
+  <img src="../../img/logos.footer.gray.webp">
 </p>

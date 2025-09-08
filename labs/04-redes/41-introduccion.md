@@ -84,5 +84,5 @@ Familiarizarse con la creación de redes bridge, la redirección de puertos, y l
 --------
 
 <p align="center">
-  <img src="../../../img/logos.footer.gray.webp">
+  <img src="../../img/logos.footer.gray.webp">
 </p>

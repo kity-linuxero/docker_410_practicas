@@ -53,7 +53,7 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 3. [La mejor página](./labs/03-dockerfiles/33-best-page/README.md)
 
 
-## 4. Redes y persistencia de datos en Docker
+## 4. Redes en Docker
 
 En estos laboratorios vamos crear nuestras primeras redes y volúmenes para persistir datos. Comprobaremos la conectividad entre contenedores y migración de datos.
 
@@ -65,8 +65,8 @@ En estos laboratorios vamos crear nuestras primeras redes y volúmenes para pers
 ## 5. Persistencia de datos en Docker
 
 ### Prácticas Lab 5: Volúmenes
-1. [Trabajando datos persistentes en Docker]()
-2. [Backup y migración de volúmenes]()
+1. [Trabajando datos persistentes en Docker](./labs/05-volumes/51-volumenes_docker.md)
+2. [Backup y migración de volúmenes](./labs/05-volumes/52-volumenes_bkp.md)
 
 
 ## 6. Docker compose
