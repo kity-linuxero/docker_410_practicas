@@ -77,8 +77,8 @@ En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedo
 
 ### Prácticas Lab 6
 
-1. [Deployar un contenedor web sencillo con Docker Compose]()
-2. [Aplicaciones multicontenedor]()
+1. [Deployar un contenedor web sencillo con Docker Compose](./labs/06-compose/61-intro.compose.md)
+2. [Aplicaciones multicontenedor](./labs/06-compose/62-multicontainer.md)
 
 ## 7. Docker compose parte II y depuración
 
