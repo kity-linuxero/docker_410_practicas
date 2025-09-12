@@ -25,7 +25,7 @@ Explicación `docker-compose.yml`:
 
 ## 2. Crear contenido HTML
 
-- Crear un archivo HTML llamado `index.html` simple en un directorio html/ dentro de tu directorio de trabajo:
+- Crear un archivo HTML llamado `index.html` en un directorio html/ dentro de tu directorio de trabajo:
 
     ```html
     <!DOCTYPE html>
