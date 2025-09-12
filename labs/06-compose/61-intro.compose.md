@@ -25,7 +25,7 @@ Explicación `docker-compose.yml`:
 
 ## 2. Crear contenido HTML
 
-- Crear un archivo HTML simple en un directorio html/ dentro de tu directorio de trabajo:
+- Crear un archivo HTML llamado `index.html` simple en un directorio html/ dentro de tu directorio de trabajo:
 
     ```html
     <!DOCTYPE html>
@@ -48,7 +48,7 @@ Este archivo será servido por Nginx desde el contenedor.
 - Desde la terminal navegamos al directorio donde se encuentra el archivo `docker-compose.yml` y ejecutamos:
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
 Este comando descargará la imagen de Nginx y levantará el contenedor con la configuración indicada. Además, por el parámetro `-d` se ejecutará en _daemon_.
@@ -63,7 +63,7 @@ Este comando descargará la imagen de Nginx y levantará el contenedor con la co
 
 - Para detener el contenedor y liberar los recursos:
     ```bash
-    docker-compose down
+    docker compose down
     ```
 
 Este comando detendrá el contenedor y limpiará la red creada.
