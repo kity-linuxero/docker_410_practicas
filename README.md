@@ -14,10 +14,11 @@
 1. [Introducción a Docker](#1-introducción-a-docker)
 2. [Conceptos básicos - Imágenes, registry y contenedores](#2-conceptos-básicos)
 3. [Dockerfile y personalizar imágenes](#3-dockerfile-y-containerizando-nuestras-primeras-apps)
-4. [Redes y persistencia de datos en Docker](#4-redes-y-persistencia-de-datos-en-docker)
-5. [Docker compose](#5-docker-compose)
-6. [Docker compose Parte II y depuración de contenedores](#6-docker-compose-parte-ii-y-depuración)
-7. [Awesome Compose](#7-awesome-compose)
+4. [Redes en Docker](#4-redes-en-docker)
+5. [Persistencia de datos en Docker](#5-persistencia-de-datos-en-docker)
+6. [Docker compose](#6-docker-compose)
+7. [Docker compose Parte II y depuración de contenedores](#7-docker-compose-parte-ii-y-depuración)
+8. [Awesome Compose](#8-awesome-compose)
 
 ## 1. Introducción a Docker
 
