@@ -42,7 +42,7 @@ networks:
 - Desde la terminal ejecutamos:
 
     ```bash
-    docker-compose -p curso up -d
+    docker compose -p curso up -d
     ```
     - El `-p` adicional es para indicar el nombre del proyecto. Por default el nombre del proyecto será la carpeta raíz.
 - Verifiquemos el contenedor esté arriba:
@@ -96,7 +96,7 @@ bce229c6ff9a   curso-web-1   1.94%     4.395MiB / 32MiB      13.73%    715kB / 1
 - Vuelva a levantar los servicios. El contenedor del servicio `web` debería ser reconstruído: 
 
     ```bash
-    docker-compose -p curso up -d
+    docker compose -p curso up -d
     ```
 
 - Volvamos a ejecutar la prueba de stress con:

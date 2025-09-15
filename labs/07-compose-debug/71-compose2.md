@@ -65,7 +65,7 @@ Configurar un archivo `compose.yml` que utilice variables de entorno desde un ar
 - Desde la terminal ejecutamos:
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
 
@@ -73,7 +73,7 @@ Configurar un archivo `compose.yml` que utilice variables de entorno desde un ar
 
 ```bash
 docker ps
-docker inspect web
+docker inspect miapp_web
 ```
 
 - Observar:
@@ -146,7 +146,7 @@ miapp2_web  nginx:alpine  "/docker-ent…"  web      49 seconds ago   Up 48 seco
 - Detenga los servicios con:
 
     ```bash
-    docker-compose down
+    docker compose down
     ```
 
 
