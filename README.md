@@ -6,8 +6,8 @@
 [![Supported by](https://img.shields.io/badge/Supported%20by-CFL410-green.svg)](https://centro410laplata.edu.ar/)
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
-![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410/v1.3-1)
-![Version](https://img.shields.io/badge/Version-1.3-orange)
+![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410/docker25-p2)
+![Version](https://img.shields.io/badge/Version-1.4-orange)
 
 
 ## 🐳 Índice de temas
