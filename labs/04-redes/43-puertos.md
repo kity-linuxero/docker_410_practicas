@@ -20,7 +20,7 @@ Comprender el uso correcto de redirección de los puertos en contenedores
     ```bash
     docker run -d --rm --name nginx -p 8080:80 nginx
     ```
-- Verificar que la app esté arriba: <a href="localhost:8080" target="_blank">localhost:8080</a>
+- Verificar que la app esté arriba: <a href="http://localhost:8080" target="_blank" rel="noopener noreferrer">localhost:8080</a>
 
 Deberías ver la ventana de bienvenida de Nginx
 
@@ -53,7 +53,7 @@ Ambos contenedores podrían escuchar internamente el puerto `80` pero es importa
     ```bash
     docker run -d --rm --name apache -p 8081:80 httpd
     ```
-- El contenedor debería levantar. Prueba acceder <a href="localhost:8081" target="_blank">localhost:8081</a>
+- El contenedor debería levantar. Prueba acceder <a href="http://localhost:8081" target="_blank" rel="noopener noreferrer">localhost:8081</a>
 - Deberías poder ver la pantalla de OK de Apache
 
 ![](./img/lab43_2.png)
