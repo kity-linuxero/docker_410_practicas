@@ -59,8 +59,9 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 En estos laboratorios vamos crear nuestras primeras redes y volúmenes para persistir datos. Comprobaremos la conectividad entre contenedores y migración de datos.
 
 ### Prácticas Lab 4: Redes
-1. [Introducción a redes en Docker]()
-2. [Conexión de Múltiples Contenedores en una Red Bridge]()
+1. [Introducción a redes en Docker](./labs/04-redes/41-introduccion.md)
+2. [Conexión de Múltiples Contenedores en una Red Bridge](./labs/04-redes/42-containers_net.md)
+3. [Puertos y redirecciones](./labs/04-redes/43-puertos.md)
 
 
 ## 5. Persistencia de datos en Docker
