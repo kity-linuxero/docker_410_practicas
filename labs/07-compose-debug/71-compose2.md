@@ -6,7 +6,7 @@ Configurar un archivo `compose.yml` que utilice variables de entorno desde un ar
 
 ## 1. Crear el archivo `.env`:
 
-- Crear un archivo llamado `environment.env` en la raíz de tu proyecto para definir las variables de entorno con el siguiente contenido.
+- Crear un archivo llamado `.env` en la raíz de tu proyecto para definir las variables de entorno con el siguiente contenido.
 
     ```env
     # Apps env
@@ -29,7 +29,7 @@ Configurar un archivo `compose.yml` que utilice variables de entorno desde un ar
             container_name: ${APP_NAME}_web
             ports:
             - "${APP_PORT}:80"
-            env_file: "environment.env"
+            env_file: ".env"
             deploy:
                 restart_policy:
                     condition: on-failure
@@ -43,7 +43,7 @@ Configurar un archivo `compose.yml` que utilice variables de entorno desde un ar
                       memory: 64M
         db:
             image: postgres
-            env_file: "environment.env"
+            env_file: ".env"
             environment:
                 POSTGRES_USER: ${DB_USER}
                 POSTGRES_PASSWORD: ${DB_PASS}
