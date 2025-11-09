@@ -70,16 +70,13 @@ Como nos encontramos en una terminal de Linux, es este caso es `sh` pero podría
 - `pwd`: Muestra el directorio de trabajo actual.
 - `ls`: Lista los archivos y directorios en el directorio actual.
 - `whoami`: Muestra el nombre del usuario actual.
-- `uname -a`: Muestra información del sistema operativo.
+- `uname -r`: Muestra versión del kernel del sistema operativo.
 - `cat /etc/os-release`: Muestra información sobre la distribución de Linux.
 - `df -h`: Muestra el uso del espacio en disco en formato legible.
 - `free -h`: Muestra la cantidad de memoria libre y utilizada en el sistema.
 - `top`: Muestra una vista dinámica en tiempo real de los procesos en ejecución. Para salir, presione `Control+C`
 - `apk update`:  (Alpine Linux) Actualiza la lista de paquetes disponibles.
 - `apk add [paquete]`:  (Alpine Linux) Instala un paquete específico (reemplaza [paquete] con el nombre del paquete que deseas instalar).
-
-- `apt update`: (Debian, Ubuntu) Actualiza la lista de paquetes disponibles (Debian, Ubuntu).
-- `app install -y [paquete]`: (Debian, Ubuntu) Instala un paquete específico (reemplaza [paquete] con el nombre del paquete que deseas instalar).
 - `exit`: Sale de la terminal. En este caso se terminará el contenedor.
 
 Los comandos les será util cuando tenga que depurar un contenedor.
