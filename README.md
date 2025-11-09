@@ -7,7 +7,7 @@
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
 ![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410/main)
-![Version](https://img.shields.io/badge/Version-1.45orange)
+![Version](https://img.shields.io/badge/Version-1.5-orange)
 
 
 ## 🐳 Índice de temas
