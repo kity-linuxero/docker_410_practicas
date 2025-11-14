@@ -267,6 +267,7 @@ En este laboratorio, has aprendido sobre la inmutabilidad de las imágenes Docke
 - <a href="https://docs.docker.com/reference/cli/docker/container/commit/" target="_blank">docker commit</a>
 - <a href="https://docs.docker.com/reference/cli/docker/image/save/" target="_blank">docker image save</a>
 - <a href="https://docs.docker.com/reference/cli/docker/image/load/" target="_blank">docker image load</a>
+- <a href="https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers" target="_blank">Understanding the image layers</a>
 
 --------------
 
