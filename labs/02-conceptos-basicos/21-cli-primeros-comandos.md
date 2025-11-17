@@ -5,6 +5,16 @@
 - Practicar los primeros comandos en Docker
 - Interactuar con la Docker CLI.
 
+### Limpiar imagenes y contenedores
+
+Antes de arrancar, eliminemos imágenes y contenedores que puedan estar de cursos anteriores:
+
+```bash
+docker stop $(docker ps -aq) #Detener los contenedores en ejecución
+docker system prune -a # Elimina todo lo que no esté usado
+docker volume prune -a # Elimina los volúmenes
+```
+
 ## 1. Iniciando un contenedor Ubuntu
 
 Desde una consola de PowerShell o Bash iniciaremos un contenedor Ubuntu con el siguiente comando:

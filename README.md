@@ -2,11 +2,10 @@
 
 
 
-[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://docker.com/)
 [![Supported by](https://img.shields.io/badge/Supported%20by-CFL410-green.svg)](https://centro410laplata.edu.ar/)
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
-![GitHub commits](https://badgen.net/github/commits/kity-linuxero/docker_410/main)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/kity-linuxero/docker_410)
 ![Version](https://img.shields.io/badge/Version-1.5-orange)
 
 
