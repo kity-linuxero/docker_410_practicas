@@ -97,7 +97,7 @@ En este laboratorio exploraremos composes compartidos por la comunidad listos pa
 
 ### Prácticas Lab 8
 
-1. [Awesome Compose]()
+1. [Awesome Compose](./labs/08-awesome-compose/81-awesome-compose.md)
 
 
 ---------
