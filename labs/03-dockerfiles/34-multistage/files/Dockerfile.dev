@@ -1,0 +1,16 @@
+# Usamos la imagen de Go (que contiene todo el kit de compilación)
+FROM golang:1.22-alpine
+
+    # Seteamos directorio de trabajo
+WORKDIR /app
+
+    # Copiamos el código fuente
+COPY main.go .
+    # Compilamos el binario
+RUN go build -o mi-app-binario main.go
+
+    # Exponemos el puerto
+EXPOSE 8080
+
+    # Ejecutamos el binario resultante
+CMD ["./mi-app-binario"]
