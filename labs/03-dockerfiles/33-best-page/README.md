@@ -65,12 +65,13 @@ best-page                     latest    b77f72c4c183   4 minutes ago    267MB
 ## 4. Correr el contenedor:
 
 ```bash
-docker run -d --name web best-page
+docker run -d -p 80:80 --name web best-page
 ```
 
 En este caso, se le manda parámetros a `docker run`:
 - `-d`: Indica que el contenedor se ejecutará como *daemon*.
 - `--name`: Asigna un nombre al contenedor.
+- `-p 80:80`: Levanta el puerto 80 de nuestra computadora y lo redirecciona al puerto 80 del contenedor.
 
 ## 5. Verificar que el contenedor esté corriendo
 
@@ -87,17 +88,7 @@ ea914d8b91b3  best-page  "nginx -g 'daemon of…"  5 seconds ago  Up 5 seconds  
 
 Primero debemos averiguar la dirección IP interna del contenedor, para eso escribamos el siguiente comando:
 
-```bash
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' web
-```
-
-Probablemente nos de un resultado como:
-
-```bash
-172.17.0.2
-```
-
-Ingrese a un navegador y escriba en la dirección [http://172.17.0.2](http://172.17.0.2)
+Ingrese a un navegador y escriba en la dirección [http://localhost](http://localhost)
 
 ![](./screenshot.png)
 
