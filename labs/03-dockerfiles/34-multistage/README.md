@@ -102,16 +102,10 @@ app-optimizada:1.0        cc5a47326e4f         24MB          7.9MB
 ## 5. Correr el contenedor:
 
 ```bash
-docker run -d --name mi-app-multi app-optimizada:1.0
+docker run -d --name mi-app-multi -p 80:8080 app-optimizada:1.0
 ```
 
-Averiguar la dirección IP del contenedor:
-
-```bash
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mi-app-multi
-```
-
-* Accede desde tu navegador a: `http://<IP_ADDRESS>`
+* Accede desde tu navegador a: [http://localhost](http://localhost)
 * Deberías ver el mensaje del programa en Go.
 
 ** ¿Cuánto debería haber ocupado la imágen si no hubiesemos usado multi-stage? **
