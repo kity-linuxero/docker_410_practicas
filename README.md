@@ -48,9 +48,9 @@ En estos laboratorios vamos a crear nuestras imagenes de forma automática usand
 
 ### Prácticas Lab 3
 
-1. [Hola Docker]()
-2. [Una vaca saluda]()
-3. [La mejor página]()
+1. [Hola Docker](./labs/03-dockerfiles/31-hola-docker/README.md)
+2. [Una vaca saluda](./labs/03-dockerfiles/32-cow/README.md)
+3. [La mejor página](./labs/03-dockerfiles/33-best-page/README.md)
 
 
 ## 4. Redes en Docker
