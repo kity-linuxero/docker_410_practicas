@@ -153,16 +153,10 @@ docker build -f Dockerfile.alpine -t best-page:alpine .
 ### 8.2 Corremos el contenedor
 
 ```bash
-docker run -d --name web-alpine best-page:alpine
+docker run -d --name web-alpine -p 80:80 best-page:alpine
 ```
 
-Averiguar la dirección IP del contenedor:
-
-```bash
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' web-alpine
-```
-
-- Ingrese a un navegador y escriba en la dirección **http://IP_ADDRESS**
+Accedemos por [http://localhost](http://localhost)
 
 ### 8.3 Eliminar contenedor
 
