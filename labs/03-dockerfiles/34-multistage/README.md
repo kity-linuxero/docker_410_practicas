@@ -3,16 +3,16 @@
 ## Objetivos:
 
 * Comprender el concepto de **Multi-stage build**.
-* Reducir drásticamente el tamaño de las imágenes finales.
-* Separar el entorno de compilación (herramientas pesadas) del entorno de ejecución (solo lo necesario).
+* Reducir el tamaño de las imágenes finales.
+* Separar el entorno de desarrollo y compilación (herramientas no necesarias para el entorno de producción) del entorno de ejecución.
 
 > [!TIP]
-> Esta técnica es la que se utiliza en entornos profesionales para que las imágenes sean seguras y ligeras.
+> Esta técnica es la que se utiliza en para que las imágenes sean más seguras y livianas.
+
+
+En este lab tenemos una aplicación escrita en **Go**. Para compilarla y generar el ejecutable, necesitamos el compilador de Go, pero para que la aplicación funcione en el servidor, solo necesitamos el archivo binario resultante.
 
 ## 1. El escenario: El entorno de desarrollo
-
-Imagina que tenemos una aplicación escrita en **Go**. Para compilarla y generar el ejecutable, necesitamos el compilador de Go, pero para que la aplicación funcione en el servidor, solo necesitamos el archivo binario resultante.
-
 
 * Crea una carpeta llamada `multi_stage`.
 * Dentro de esa carpeta crea un archivo llamado `main.go` con el siguiente contenido:
@@ -102,16 +102,10 @@ app-optimizada:1.0        cc5a47326e4f         24MB          7.9MB
 ## 5. Correr el contenedor:
 
 ```bash
-docker run -d --name mi-app-multi app-optimizada:1.0
+docker run -d --name mi-app-multi -p 80:8080 app-optimizada:1.0
 ```
 
-Averiguar la dirección IP del contenedor:
-
-```bash
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mi-app-multi
-```
-
-* Accede desde tu navegador a: `http://<IP_ADDRESS>`
+* Accede desde tu navegador a: [http://localhost](http://localhost)
 * Deberías ver el mensaje del programa en Go.
 
 ** ¿Cuánto debería haber ocupado la imágen si no hubiesemos usado multi-stage? **
