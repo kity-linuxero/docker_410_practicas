@@ -69,7 +69,7 @@ Ambos contenedores podrían escuchar internamente el puerto `80` pero es importa
 - Eliminamos la red creada
 
     ```bash
-    docker netork rm web_apps
+    docker network rm web_apps
     ```
 --------
 
