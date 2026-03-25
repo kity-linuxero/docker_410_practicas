@@ -2,10 +2,15 @@
 
 ## Objetivos
 
-  - Crear una red bridge personalizada para comunicación aislada entre contenedores.
-  - Desplegar un servidor Samba (SMB) sin exponer puertos al host para evitar conflictos con Windows.
-  - Configurar un volumen de Docker que conecte al share a través de la red interna.
-  - Solucionar problemas de permisos comunes en montajes de red.
+  - Desplegar un servidor Samba (SMB) para compartir archivos. Simulando que tenemos un share de Windows.
+  - Configurar un volumen de Docker que conecte al share de Windows a través de la red.
+
+>Para simplificar la implementación, usaremos una imagen de Samba que ya viene preconfigurada y trabajaremos en una red bridge interna de Docker.
+
+## ¿Qué son CIFS y Samba?
+
+- **CIFS (Common Internet File System)**: Es un protocolo de red propietario originalmente desarrollado por Microsoft, basado en SMB (Server Message Block). Se utiliza principalmente en entornos Windows para compartir archivos, impresoras y recursos a través de una red de forma transparente para el usuario.
+- **Samba**: Es un software libre y de código abierto que implementa el protocolo SMB/CIFS en sistemas Unix y Linux. Samba permite que un servidor Linux actúe como un servidor de archivos e impresión compatible con redes Windows, facilitando la interoperabilidad entre ambos sistemas operativos.
 
 ## Parte 1: Configuración de la Red y el Servidor
 
@@ -22,21 +27,20 @@
   - Ejecuta el servidor conectado a `red_lab`. 
 
     ```powershell
-    docker run -d --name servidor_samba `
-      --network red_lab `
-      dperson/samba `
-      -u "cristian;password123" `
-      -s "publico;/data;0;0;0;cristian"
+    docker run -d --name servidor_samba --network red_lab dperson/samba -u "user;password123" -s "publico;/data;0;0;0;user"
     ```
 
 ### 3\. Ajustar permisos internos:
 
-  - Para evitar errores de "Permission denied" desde el cliente, forzamos que la carpeta interna del servidor sea accesible:
+  - Para evitar errores de `Permission denied` desde el cliente, forzamos que la carpeta interna del servidor sea accesible:
 
     ```powershell
     docker exec -u root servidor_samba chmod -R 777 /data
     ```
 
+    > [!NOTE]
+    > No se recomienda usar los permisos `777` en Linux, ya que el mismo otorga permisos de lectura, escritura y ejecución a todos los usuarios. Pero en este caso, lo haremos a modo de prueba.
+ 
 ### 4\. Preparar datos de prueba:
 
   - Creamos un archivo directamente dentro del servidor:
@@ -59,15 +63,12 @@
 
 ### 2\. Crear el volumen en PowerShell:
 
-  - **IMPORTANTE:** Reemplaza `<IP_INTERNA>` con el dato del paso anterior. Usamos la opción `noperm` para que el cliente no bloquee la escritura localmente:
+  > [!IMPORTANT]  
+  > Reemplaza `<IP_INTERNA>` con el dato del paso anterior. Usamos la opción `noperm` para que el cliente no bloquee la escritura localmente:
 
-    ```powershell
-    docker volume create --driver local `
-      --opt type=cifs `
-      --opt device=//<IP_INTERNA>/publico `
-      --opt o="username=cristian,password=password123,file_mode=0777,dir_mode=0777,noperm,rw" `
-      volumen_cifs
-    ```
+  ```powershell
+  docker volume create --driver local --opt type=cifs --opt device=//<IP_INTERNA>/publico --opt o="username=user,password=password123,file_mode=0777,dir_mode=0777,noperm,rw" volumen_cifs
+  ```
 
 Si sale lo siguiente:
 ```powershell
@@ -107,6 +108,12 @@ Significa que no reemplazaste `<IP_INTERNA>` con la IP del servidor.
     ```powershell
     docker exec servidor_samba ls /data
     ```
+  - Deberíamos ver los siguientes archivos:
+
+    ```powershell
+    archivo_red.txt
+    nota_cliente.txt
+    ```
 
 ## Parte 4: Limpieza
 
@@ -119,6 +126,10 @@ Significa que no reemplazaste `<IP_INTERNA>` con la IP del servidor.
     docker network rm red_lab
     ```
 
+
+## Conclusión
+
+En este lab vimos que es posible montar un share de red de Windows en un contenedor Docker. En el lab se usaron usuarios preestablecidos, pero se puede configurar en una red con usuarios de un dominio.
 
 -----
 
