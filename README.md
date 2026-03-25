@@ -67,8 +67,9 @@ En estos laboratorios vamos crear nuestras primeras redes y volúmenes para pers
 ## 5. Persistencia de datos en Docker
 
 ### Prácticas Lab 5: Volúmenes
-1. [Trabajando datos persistentes en Docker]()
-2. [Backup y migración de volúmenes]()
+1. [Trabajando datos persistentes en Docker](./labs/05-volumes/51-volumenes_docker.md)
+2. [Backup y migración de volúmenes](./labs/05-volumes/52-volumenes_bkp.md)
+3. [Montando shares de red (SMB/CIFS) en red interna](./labs/05-volumes/53-cifs.md)
 
 
 ## 6. Docker compose
