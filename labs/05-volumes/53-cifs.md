@@ -38,8 +38,8 @@
     docker exec -u root servidor_samba chmod -R 777 /data
     ```
 
-    > [!NOTE]
-    > No se recomienda usar los permisos `777` en Linux, ya que el mismo otorga permisos de lectura, escritura y ejecución a todos los usuarios. Pero en este caso, lo haremos a modo de prueba.
+> [!NOTE]
+> No se recomienda usar los permisos `777` en Linux, ya que el mismo otorga permisos de lectura, escritura y ejecución a todos los usuarios. Pero en este caso, lo haremos a modo de prueba.
  
 ### 4\. Preparar datos de prueba:
 
