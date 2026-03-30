@@ -1,128 +1,120 @@
 # Laboratorio 5.2 - Backup y migración de volúmenes
 
 ## Objetivo
-- Usar volúmenes para hacer backups, restaurar datos y migrar datos entre contenedores.
-- Utilizar el flag `--volumes-from` para crear contenedores que monten volúmenes.
 
-> **Nota:** Con el flag [`--volumes-from`](#referencias) podemos crear contenedores que monten los mismos volúmenes de otros contenedores.
+  - Gestionar persistencia mediante volumes.
+  - Utilizar la sintaxis `--mount` para mayor claridad y control.
+  - Realizar backups comprimidos, simular la pérdida de datos y restaurarlos en un nuevo volumen.
 
-> [!IMPORTANT] 
-> **tar:** En este lab utilizaremos `tar` para empaquetar el contenido del volumen `dbdata` en un archivo `backup.tar`. Para mas info, consulte la [manual de tar](https://www.commandlinux.com/man-page/man1/tar.1.html). Este comando está fuera del alcance de este curso. Solo se utiliza para fines ilustrativos.
+
+> [\!IMPORTANT]
+> **tar & busybox:** Utilizaremos la imagen `busybox` para ejecutar `tar` y empaquetar el contenido del volumen. El flag `-C` es fundamental para que el backup no incluya rutas absolutas del contenedor.
 
 ## 1. Preparación:
 
-- Crear un directorio de backup:
+  - Crear un directorio de backup en tu host:
 
     ```bash
     mkdir backup
     cd backup
     ```
 
-- Crear un nuevo contenedor llamado `dbstore` con un volumen llamado `/dbdata`.:
+  - Crear un **Named Volume** llamado `v_datos_app`:
 
     ```bash
-    docker run -v /dbdata --name dbstore ubuntu /bin/bash
-    ```
-    En este caso utilizamos un volumen [anónimo](https://docs.docker.com/engine/storage/volumes#named-and-anonymous-volumes), ya que no le seteamos el nombre. El nombre se genera automáticamente por Docker. De todas maneras, en este caso, se monta en la ruta `/dbdata` del contenedor.
-    Podemos ver el nombre del volumen que Docker le ha asignado con el siguiente comando:
-
-    ```bash
-    docker volume ls
+    docker volume create v_datos_app
     ```
 
-    Probablemente el nombre asignado por Docker sea el hash del volumen. Algo como `e877e92467ac3ec0108...`.
-
-- Crear un archivo de texto que será como nuestra info a resguardar:
+  - Crear un contenedor llamado `dbstore` que monte este volumen usando la sintaxis `--mount`:
 
     ```bash
-    echo "Datos de la base de datos" > info.txt
+    docker run -d --name dbstore --mount type=volume,src=v_datos_app,dst=/data ubuntu tail -f /dev/null
     ```
 
-- Copiamos el archivo `info.txt` al volumen `dbdata`:
+  - Crear un archivo de texto con "información crítica" directamente en el volumen:
 
     ```bash
-    docker cp info.txt dbstore:/dbdata
+    docker exec dbstore sh -c "echo 'Backup realizado el $(date)' > /data/info.txt"
     ```
 
-- Deberíamos ver el siguiente mensaje que indica que el archivo fue correctamente copiado al volumen:
+  - Verificar que el archivo existe:
 
     ```bash
-    Successfully copied 2.05kB to dbstore:/dbdata
+    docker exec dbstore cat /data/info.txt
     ```
 
+## 2. Realizar el backup (Empaquetado):
 
+En este paso, lanzamos un contenedor temporal que "conecta" nuestro volumen con una carpeta de nuestro host para extraer la información:
 
-## 2. Realizar el backup:
+  - **src=v\_datos\_app**: El volumen origen.
 
-En el siguiente comando, haremos lo siguiente:
-
-- Lanzar un contenedor temporal y montar el volumen del contenedor `dbstore`.
-- Montar un directorio del host local como `/backup`.
-- Pasar un comando que empaquete el contenido del volumen `dbdata` en un archivo `backup.tar` dentro del directorio `/backup`.
+  - **$(pwd):/backup**: Nuestra carpeta actual en el host.
 
     ```bash
-    docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
+    docker run --rm --mount type=volume,src=v_datos_app,dst=/source_data -v $(pwd):/backup_dir busybox tar czf /backup_dir/backup_2026.tar.gz -C /source_data .
     ```
 
-    Cuando se completa el comando y el contenedor se detiene, crea una copia de seguridad del volumen `dbdata` en el archivo `backup.tar` dentro del directorio `backup`. 
+  - Verifique que el archivo `backup_2026.tar.gz` se ha creado en su directorio actual.
 
-- Verifique en su explorador de archivos o por consola que el archivo `backup.tar` se ha creado en el directorio `backup`.
+## 3\. Simulación de desastre (Borrado):
 
+Para demostrar la utilidad del backup, eliminaremos el contenedor y el volumen original:
 
-## 3. Restaurar volumen desde el backup:
-
-Con el backup recién creado, podemos restaurarlo en el mismo contenedor o en otro contenedor que creemos en otro lugar.
-
-- Para este lab, crearemos un nuevo contenedor llamado `dbstore2`.
+  - Detener y eliminar el contenedor:
 
     ```bash
-    docker run -v /dbdata --name dbstore2 -dit ubuntu /bin/bash
+    docker rm -f dbstore
     ```
 
-- Luego, descomprimimos el archivo de backup en el volumen de datos del nuevo contenedor:
+  - Eliminar el volumen (Pérdida total de datos):
 
     ```bash
-    docker run --rm --volumes-from dbstore2 -v $(pwd):/backup ubuntu bash -c "cd /dbdata && tar xvf /backup/backup.tar --strip 1"
+    docker volume rm v_datos_app
     ```
 
-## 4. Verificar la restauración:
+## 4\. Restaurar volumen desde el backup:
 
-- Verificamos si el archivo restaurado se encuentra en el contenedor `dbstore2`:
+Ahora restauraremos los datos en un volumen completamente nuevo, simulando una migración a otro host o recuperación de desastre.
+
+  - Crear el nuevo volumen de destino:
 
     ```bash
-    docker exec -it dbstore2 ls /dbdata
+    docker volume create v_datos_recuperados
     ```
-- Deberíamos ver listado el archivo `info.txt` restaurado.
 
-
-## 5. Eliminar contenedores y volúmenes
-
-- Eliminamos los contenedores `dbstore` y `dbstore2`:
+  - Descomprimir el backup dentro del nuevo volumen:
 
     ```bash
-    docker rm -f dbstore dbstore2
+    docker run --rm --mount type=volume,src=v_datos_recuperados,dst=/target_data -v $(pwd):/backup_dir busybox sh -c "cd /target_data && tar xzf /backup_dir/backup_2026.tar.gz"
     ```
-- Eliminar volúmenes. Como se han creado volúmenes anónimos, vamos a eliminarlos con el comando `docker volume prune`:
+
+## 5. Verificar la restauración:
+
+  - Verificamos si el archivo restaurado se encuentra en el nuevo volumen usando un contenedor efímero:
 
     ```bash
-    docker volume prune
+    docker run --rm --mount type=volume,src=v_datos_recuperados,dst=/data alpine cat /data/info.txt
     ```
-- Eliminar directorio `backup`:
+
+  - Deberías ver el contenido original que creaste en el paso 1.
+
+## 6\. Limpieza final
+
+  - Eliminar el volumen de prueba y el archivo de backup:
 
     ```bash
+    docker volume rm v_datos_recuperados
     cd ..
-    rm -rf backup
+    rm -rf backup #Borrar la carpeta backup
     ```
 
-## Referencias
 
-- [Docker Docs: Backup, Restore or Migrate Data Volumes](https://docs.docker.com/engine/storage/volumes#back-up-restore-or-migrate-data-volumes)
-- [Docker Docs: Volumes from](https://docs.docker.com/reference/cli/docker/container/run/#volumes-from)
-- [Docker Docs: Named and anonymous volumes](https://docs.docker.com/engine/storage/volumes#named-and-anonymous-volumes)
-- [Docker Docs: Volumes](https://docs.docker.com/engine/storage/volumes/)
+-----
 
---------
+<p align="center"\>
+<img src="../../img/logos.footer.gray.webp"\>
+</p\>
 
-<p align="center">
-  <img src="../../img/logos.footer.gray.webp">
-</p>
+-----
+
