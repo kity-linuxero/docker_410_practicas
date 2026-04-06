@@ -52,7 +52,7 @@ En este paso, lanzamos un contenedor temporal que "conecta" nuestro volumen con 
   - **$(pwd):/backup**: Nuestra carpeta actual en el host.
 
     ```bash
-    docker run --rm --mount type=volume,src=v_datos_app,dst=/source_data -v $(pwd):/backup_dir busybox tar czf /backup_dir/backup_2026.tar.gz -C /source_data .
+    docker run --rm --mount type=volume,src=v_datos_app,dst=/source_data -v ${pwd}:/backup_dir busybox tar czf /backup_dir/backup_2026.tar.gz -C /source_data .
     ```
 
   - Verifique que el archivo `backup_2026.tar.gz` se ha creado en su directorio actual.
