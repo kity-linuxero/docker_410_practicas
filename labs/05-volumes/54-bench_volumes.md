@@ -4,6 +4,7 @@
 
   - Comparar el rendimiento de lectura/escritura y latencia entre **Bind Mounts**, **Named Volumes** y **tmpfs**.
   - Utilizar la herramienta `dd` para pruebas de rendimiento secuencial.
+  - Compartir el resultado en el foro de la clase [foro clase en Campus](https://campus.idepba.com.ar/mod/forum/discuss.php?d=21)
 
 ## 1\. Preparación del Entorno
 
@@ -80,11 +81,13 @@ Velocidad: 2.5GB/s
 
 ## 5\. Análisis de Resultados
 
-| Tipo de Montaje | Velocidad (MB/s) | Caso de Uso Ideal |
+Resultados realizado en una Laptop con disco SSD corriendo GNU/Linux.
+
+| Tipo de Montaje | Velocidad | Caso de Uso Ideal |
 | :--- | :--- | :--- |
-| **Bind Mount** | | Código fuente en desarrollo (Hot-reload). |
-| **Named Volume** | | Bases de datos y persistencia en producción. |
-| **tmpfs** | | Secretos, caché temporal o sesiones de alta velocidad. |
+| **Bind Mount** | 1.7GB/s | Código fuente en desarrollo (Hot-reload). |
+| **Named Volume** | 1.5GB/s | Bases de datos y persistencia en producción. |
+| **tmpfs** | 2.5GB/s | Secretos, caché temporal o sesiones de alta velocidad. |
 
 
 ## 6\. Limpieza
