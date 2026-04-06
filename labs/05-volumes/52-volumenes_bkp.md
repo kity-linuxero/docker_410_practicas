@@ -86,7 +86,7 @@ Ahora restauraremos los datos en un volumen completamente nuevo, simulando una m
   - Descomprimir el backup dentro del nuevo volumen:
 
     ```bash
-    docker run --rm --mount type=volume,src=v_datos_recuperados,dst=/target_data -v $(pwd):/backup_dir busybox sh -c "cd /target_data && tar xzf /backup_dir/backup_2026.tar.gz"
+    docker run --rm --mount type=volume,src=v_datos_recuperados,dst=/target_data -v ${pwd}:/backup_dir busybox sh -c "cd /target_data && tar xzf /backup_dir/backup_2026.tar.gz"
     ```
 
 ## 5. Verificar la restauración:
