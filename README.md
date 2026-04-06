@@ -70,6 +70,7 @@ En estos laboratorios vamos crear nuestras primeras redes y volúmenes para pers
 1. [Trabajando datos persistentes en Docker](./labs/05-volumes/51-volumenes_docker.md)
 2. [Backup y migración de volúmenes](./labs/05-volumes/52-volumenes_bkp.md)
 3. [Montando shares de red (SMB/CIFS) en red interna](./labs/05-volumes/53-cifs.md)
+4. [Benchmarking de volúmenes](./labs/05-volumes/54-bench_volumes.md)
 
 
 ## 6. Docker compose
