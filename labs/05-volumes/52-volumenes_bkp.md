@@ -106,7 +106,7 @@ Ahora restauraremos los datos en un volumen completamente nuevo, simulando una m
     ```bash
     docker volume rm v_datos_recuperados
     cd ..
-    rm -rf backup #Borrar la carpeta backup
+    rm -r backup #Borrar la carpeta backup
     ```
 
 
