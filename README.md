@@ -6,7 +6,7 @@
 [![Supported by](https://img.shields.io/badge/Supported%20by-IDEP-green.svg)](https://idepba.com.ar/)
 [![Powered](https://img.shields.io/badge/Powered%20by-ATE-green.svg)](https://atepba.org.ar/)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/kity-linuxero/docker_410)
-![Version](https://img.shields.io/badge/Version-1.6-orange)
+![Version](https://img.shields.io/badge/Version-1.7-orange)
 
 
 ## 🐳 Índice de temas
@@ -36,10 +36,10 @@ En estos laboratorios entenderemos en la práctica la diferencia entre imágen y
 
 ### Prácticas Lab 2
 
-1. [Primeros comandos en Docker]()
-2. [Imagenes, registry y contenedores]()
-3. [Imágenes y versiones]()
-4. [Guardando imágenes en DockerHub]()
+1. [Primeros comandos en Docker](./labs/02-conceptos-basicos/21-cli-primeros-comandos.md)
+2. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/22-images-registry-container.md)
+3. [Imágenes y versiones](./labs/02-conceptos-basicos/23-images-tags.md)
+4. [Guardando imágenes en DockerHub](./labs/02-conceptos-basicos/24-images-push.md)
 
 
 ## 3. Dockerfile y Containerizando nuestras primeras apps
