@@ -67,10 +67,10 @@ En estos laboratorios vamos crear nuestras primeras redes y volúmenes para pers
 ## 5. Persistencia de datos en Docker
 
 ### Prácticas Lab 5: Volúmenes
-1. [Trabajando datos persistentes en Docker]()
-2. [Backup y migración de volúmenes]()
-3. [Montando shares de red (SMB/CIFS) en red interna]()
-4. [Benchmarking de volúmenes]()
+1. [Trabajando datos persistentes en Docker](./labs/05-volumenes/51-volumenes.md)
+2. [Backup y migración de volúmenes](./labs/05-volumenes/52-backup.md)
+3. [Montando shares de red (SMB/CIFS) en red interna](./labs/05-volumenes/53-smb.md)
+4. [Benchmarking de volúmenes](./labs/05-volumenes/54-benchmarking.md)
 
 
 ## 6. Docker compose
@@ -80,8 +80,8 @@ En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedo
 ### Prácticas Lab 6
 
 
-1. [Deployar un contenedor web sencillo con Docker Compose]()
-2. [Aplicaciones multicontenedor]()
+1. [Deployar un contenedor web sencillo con Docker Compose](./labs/06-compose/61-compose.md)
+2. [Aplicaciones multicontenedor](./labs/06-compose/62-multicontainer.md)
 
 ## 7. Docker compose parte II y depuración
 
