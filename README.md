@@ -89,9 +89,9 @@ En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose.
 
 ### Prácticas Lab 7
 
-1. [Docker Compose | Parte II]()
-2. [Verificación de recursos]()
-3. [Depuración de contenedores]()
+1. [Docker Compose | Parte II](./labs/07-compose-debug/71-compose2.md)
+2. [Verificación de recursos](./labs/07-compose-debug/72-compose-resources.md)
+3. [Depuración de contenedores](./labs/07-compose-debug/73-debug.md)
 
 
 ## 8. Awesome Compose
