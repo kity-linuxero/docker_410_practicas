@@ -2,8 +2,82 @@
 
 ### Objetivos:
 
+- Correr nuestro primer contenedor `hello world`.
+- Entender que sucede cuando corremos un contenedor.
 - Correr nuestro primer contenedor Linux.
 - Ejecución de primeros comandos sobre un contenedor Linux.
+
+## Hola mundo. Nuestro primer contenedor
+
+Como en todo lenguaje de programación, lo que primero hacemos es el clásico `hello world` y en Docker haremos lo mismo.
+
+En Windows, abrimos una ventana de PowerShell y escribimos lo siguiente:
+
+
+```powershell
+docker run hello-world
+```
+
+Observamos la salida de la terminal:
+
+```bash
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+c1ec31eb5944: Pull complete 
+Digest: sha256:1408fec50309afee38f3535383f5b09419e6dc0925bc69891e79d84cc4cdcec6
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+```
+
+### Entendiendo la salida de la terminal
+
+Si la salida de la terminal es como la que se indica arriba, la instalación de Docker fue correcta. `hello-world` es una imágen que se usa para corroborar que Docker esté funcionando. En el texto de salida podemos observar lo siguiente:
+
+```bash
+...
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+    To try something more ambitious, you can run an Ubuntu container with:
+    
+    $ docker run -it ubuntu bash
+...
+```
+
+Lo que indicá que:
+1. El cliente Docker se contactó con el daemon de Docker.
+2. El daemon descargó (pulled) la imágen `hello-world` desde <a href="https://hub.docker.com/" target="_blank">Docker Hub</a>
+3. El daemon de Docker creó un nuevo contenedor a partir de esa imagen que ejecuta el ejecutable que produce la salida que estábamos leyendo.
+4. El daemon de Docker transmitió esa salida al cliente de Docker, que la envió a la terminal.
+
+
 
 ## Contenedores Linux
 
@@ -24,9 +98,9 @@ Luego que la imágen se haya descargado, tendremos un promt de terminal de sh de
 /#
 ```
 
-Ya tenemos un contenedor Linux corriendo. Lo podemos usar como si de una VM se tratara. Solo para probar, vamos a instalar algunos paquetes.
+Ya tenemos un contenedor Linux corriendo. Lo podemos usar como si de una VM se tratara. 
 
-Ejecutamos el siguiente comando para verificar si TCP/IP está OK:
+Ejecutamos el siguiente comando para verificar conectividad y si tenemos red:
 
 ```bash
 ping -c 3 localhost
@@ -65,7 +139,7 @@ curl ifconfig.co
 
 ### 3. Comandos de GNU/Linux 
 
-Como nos encontramos en una terminal de Linux, es este caso es `sh` pero podría ser `bash`, podemos ejecutar comandos en el intérprete del contenedor. A continuación tiene una lista de comandos básicos para probar dentro de una terminal Linux. Pruebe ejecutar alguno de los siguientes comandos para familiarizarse con la terminal:
+Como nos encontramos en una terminal Linux, es este caso es `sh` pero podría ser `bash`, podemos ejecutar comandos en el intérprete del contenedor. A continuación tiene una lista de comandos básicos para probar dentro de una terminal Linux. Pruebe ejecutar alguno de los siguientes comandos para familiarizarse con la terminal:
 
 - `pwd`: Muestra el directorio de trabajo actual.
 - `ls`: Lista los archivos y directorios en el directorio actual.
@@ -89,6 +163,14 @@ Para salir del contenedor y detener su ejecución:
 exit
 ```
 
+## Resumen
+
+En este laboratorio práctico se abordaron los siguientes puntos clave:
+- **Primer contenedor `hello-world`:** Ejecución de nuestro primer contenedor de prueba para verificar la correcta instalación y funcionamiento de Docker, comprendiendo los pasos del cliente y del daemon (descarga de imagen, creación y ejecución).
+- **Contenedor interactivo Alpine Linux:** Inicio de una sesión interactiva en una distribución liviana utilizando `docker run -it alpine sh`.
+- **Gestión de paquetes:** Utilización de `apk update` y `apk add curl` para instalar herramientas adicionales dentro del contenedor.
+- **Comandos básicos de GNU/Linux:** Ejecución de comandos del sistema (`pwd`, `ls`, `whoami`, `uname`, `cat`, `df`, `free`, `top`) útiles para explorar y diagnosticar el entorno del contenedor.
+- **Ciclo de vida:** Salida y detención del contenedor de manera segura a través de la instrucción `exit`.
 
 ---------
 
