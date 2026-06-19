@@ -36,10 +36,10 @@ En estos laboratorios entenderemos en la práctica la diferencia entre imágen y
 
 ### Prácticas Lab 2
 
-1. [Primeros comandos en Docker]()
-2. [Imagenes, registry y contenedores]()
-3. [Imágenes y versiones]()
-4. [Guardando imágenes en DockerHub]()
+1. [Primeros comandos en Docker](./labs/02-conceptos-basicos/21-cli-primeros-comandos.md)
+2. [Imagenes, registry y contenedores](./labs/02-conceptos-basicos/22-imagenes-registry-contenedores.md)
+3. [Imágenes y versiones](./labs/02-conceptos-basicos/23-imagenes-y-versiones.md)
+4. [Guardando imágenes en DockerHub](./labs/02-conceptos-basicos/24-guardando-imagenes-en-dockerhub.md)
 
 
 ## 3. Dockerfile y Containerizando nuestras primeras apps
