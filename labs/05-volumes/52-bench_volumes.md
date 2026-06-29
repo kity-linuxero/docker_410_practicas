@@ -92,7 +92,7 @@ Resultados realizado en una Laptop con disco SSD corriendo GNU/Linux.
 
 ## 6\. Compartir resultados
 
-Inicie sesión en el [campus](https://campus.idepba.com.ar/mod/forum/discuss.php?d=21) y comparta sus resultados en el hilo de la clase correspondiente.
+Inicie sesión en el [campus](https://campus.idepba.com.ar/mod/forum/discuss.php?d=54) y comparta sus resultados en el hilo de la clase correspondiente.
 
 ## 7\. Limpieza
 
