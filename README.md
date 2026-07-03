@@ -78,8 +78,8 @@ En estos laboratorios comprobará las ventajas y sencillez de ejecutar contenedo
 ### Prácticas Lab 6
 
 
-1. [Deployar un contenedor web sencillo con Docker Compose]()
-2. [Aplicaciones multicontenedor]()
+1. [Deployar un contenedor web sencillo con Docker Compose](./labs/06-compose/61-intro.compose.md)
+2. [Aplicaciones multicontenedor](./labs/06-compose/62-multicontainer.md)
 
 ## 7. Docker compose parte II y depuración
 
@@ -91,14 +91,6 @@ En estos laboratorios veremos algunas atributos mas avanzados de Docker Compose.
 2. [Verificación de recursos]()
 3. [Depuración de contenedores]()
 
-
-## 8. Awesome Compose
-
-En este laboratorio exploraremos composes compartidos por la comunidad listos para deployar y usar.
-
-### Prácticas Lab 8
-
-1. [Awesome Compose]()
 
 
 ---------
